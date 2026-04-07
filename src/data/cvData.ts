@@ -27,7 +27,7 @@ export interface CVSection {
   summary: string;
 }
 
-export const bio = `Developer and visual thinker with roots in both computer science and film. Drawn to the intersection of code and design — building things that work well and look considered. Currently at Alda Software, where I have grown from junior developer into a cross-functional role spanning frontend development, UX design, and marketing.`;
+export const bio = `Developer and visual thinker with roots in both computer science and film. Drawn to the intersection of code and design — building things that work well and look considered. Comfortable across the stack, with a particular focus on frontend and the craft of what users actually see and experience.`;
 
 export const highlights: JobEntry[] = [
   {
@@ -35,7 +35,7 @@ export const highlights: JobEntry[] = [
     company: "Alda Software",
     role: "Software Developer & UX Specialist",
     description:
-      "Joined Alda as a junior developer and grew into a cross-functional role spanning frontend development, UX design, and marketing. Lead and contribute to the full development lifecycle of Alda's web app, survey tools, and micro-learning courses — from translating creative briefs and user research into UX designs, to implementing responsive interfaces in React, TypeScript, and Next.js. Maintain and optimise back-end services and APIs (Python/Django), and manage hosting infrastructure including SCORM Cloud. Collaborate with third-party design and research agencies on usability testing and UI/UX validation. Also active in the growth and marketing team, producing marketing materials and developing the company website in Framer.",
+      "Full-stack developer on Alda's core product — a web app, survey tool and suite of micro-learning courses. Work across the stack daily: React, TypeScript and Next.js on the frontend; Python/Django API and AWS infrastructure on the backend. Beyond engineering, I've been involved in shaping the micro-learning content from creative brief through to implementation, collaborated with external agencies on UX research and usability testing, and contributed to the company's growth and marketing work including the Framer website and brand-consistent design assets across digital formats.",
   },
   {
     date: "December 2023",
@@ -82,11 +82,11 @@ export const skills: SkillCategory[] = [
   },
   {
     label: "Languages",
-    items: ["Javascript", "Typescript", "Python", "Java", "SQL"],
+    items: ["Typescript", "Python", "Javascript", "Java", "SQL"],
   },
   {
     label: "Design",
-    items: ["Figma", "Framer"],
+    items: ["Figma", "Framer, Canva", "GNU Image Manipulation Program (GIMP)"],
   },
 ];
 
@@ -110,7 +110,8 @@ export const otherProjects: ProjectEntry[] = [
 ];
 
 export const workExperience: WorkEntry[] = [
-  { dates: "2023–present", role: "Alda Software — Software Developer & UX Specialist" },
+  { dates: "2024–present", role: "Alda Software — Software Developer & UX Specialist" },
+  { dates: "2023–2024", role: "Alda Software — Junior Software Developer & UX Specialist" },
   { dates: "2022–2023", role: "Alda Software — Office Manager & Researcher" },
   { dates: "2022–2023", role: "Tixly — Customer Service Support" },
   { dates: "2017–2022", role: "Grái Kötturinn Café — Chef and waiter" },

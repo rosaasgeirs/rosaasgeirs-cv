@@ -1,24 +1,26 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import CardGrid from "./components/CardGrid";
-import Modal from "./components/Modal";
-import "./App.css";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Highlights from "./components/Highlights";
+import Education from "./components/Education";
+import SkillsAndLanguages from "./components/SkillsAndLanguages";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
+
+import "./styles/animations.css";
+import "./styles/sections.css";
 
 function App() {
-  const [activeSection, setActiveSection] = useState<string | null>(null);
-
   return (
     <>
-      <Header />
-      <main>
-        <CardGrid onSelect={setActiveSection} />
-      </main>
-      {activeSection && (
-        <Modal
-          sectionId={activeSection}
-          onClose={() => setActiveSection(null)}
-        />
-      )}
+      <Hero />
+      <About />
+      <Highlights />
+      <Education />
+      <SkillsAndLanguages />
+      <Experience />
+      <Projects />
+      <Footer />
     </>
   );
 }

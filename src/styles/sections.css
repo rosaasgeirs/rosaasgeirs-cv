@@ -1,0 +1,301 @@
+/* ─── Section base ────────────────────────────── */
+
+.cv-section {
+  min-height: 100svh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--section-padding);
+  width: 100%;
+}
+
+.cv-section .section-inner {
+  max-width: var(--section-max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ─── Hero ────────────────────────────────────── */
+
+.hero-section {
+  text-align: left;
+  position: relative;
+}
+
+.hero-name {
+  font-family: "Lora", serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--dark);
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.hero-dash {
+  display: block;
+  font-size: 16px;
+  margin: 12px 0 20px;
+  color: var(--coral);
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--mid);
+  margin-bottom: 32px;
+}
+
+.hero-contact {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: var(--light);
+  font-weight: 300;
+  flex-wrap: wrap;
+}
+
+.hero-contact a {
+  color: var(--coral);
+  text-decoration: none;
+}
+
+.hero-contact a:hover {
+  text-decoration: underline;
+}
+
+/* ─── About ───────────────────────────────────── */
+
+.about-text {
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--dark);
+  max-width: 620px;
+}
+
+/* ─── Section titles ──────────────────────────── */
+
+.section-heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 32px;
+}
+
+/* ─── Entries (Highlights, Education, Projects) ─ */
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.entry-date {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.entry-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark);
+}
+
+.entry-title strong {
+  font-weight: 600;
+}
+
+.entry-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--mid);
+  margin-top: 4px;
+}
+
+/* ─── Education timeline ──────────────────────── */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-left: 2px solid var(--coral);
+  padding-left: 24px;
+}
+
+.timeline .entry {
+  position: relative;
+}
+
+.timeline .entry::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+/* ─── Skills ──────────────────────────────────── */
+
+.skill-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skill-category-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--light);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.skill-pill {
+  background: var(--coral-tint);
+  color: var(--coral);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+/* ─── Languages (spoken) ──────────────────────── */
+
+.spoken-languages {
+  font-size: 16px;
+  color: var(--mid);
+  margin-top: 32px;
+}
+
+.spoken-languages strong {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+/* ─── Work Experience ─────────────────────────── */
+
+.work-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-row {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 14px;
+}
+
+.work-row .entry-date {
+  flex-shrink: 0;
+  width: 110px;
+}
+
+.work-role {
+  color: var(--dark);
+}
+
+/* ─── Footer ──────────────────────────────────── */
+
+.footer-section {
+  text-align: center;
+}
+
+.footer-section .section-divider {
+  margin-bottom: 40px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--light);
+  font-weight: 300;
+}
+
+.footer-contact a {
+  color: var(--coral);
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-name {
+  font-family: "Lora", serif;
+  font-size: 20px;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+/* ─── Responsive ──────────────────────────────── */
+
+@media (max-width: 640px) {
+  .cv-section {
+    padding: var(--section-padding-mobile);
+  }
+
+  .hero-name {
+    font-size: 44px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+  }
+
+  .hero-contact {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .about-text {
+    font-size: 17px;
+  }
+
+  .work-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .work-row .entry-date {
+    width: auto;
+  }
+
+  .timeline {
+    padding-left: 18px;
+  }
+
+  .timeline .entry::before {
+    left: -24px;
+    width: 6px;
+    height: 6px;
+  }
+}

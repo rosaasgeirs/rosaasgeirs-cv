@@ -70,18 +70,24 @@ export const education: EduEntry[] = [
   },
 ];
 
-export const skills = [
-  "React",
-  "React Native",
-  "Javascript",
-  "Typescript",
-  "Next.js",
-  "Expo",
-  "Python",
-  "Java",
-  "SQL",
-  "Figma",
-  "Framer",
+export interface SkillCategory {
+  label: string;
+  items: string[];
+}
+
+export const skills: SkillCategory[] = [
+  {
+    label: "Frontend",
+    items: ["React", "React Native", "Next.js", "Expo"],
+  },
+  {
+    label: "Languages",
+    items: ["Javascript", "Typescript", "Python", "Java", "SQL"],
+  },
+  {
+    label: "Design",
+    items: ["Figma", "Framer"],
+  },
 ];
 
 export const languages = [

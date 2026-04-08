@@ -7,13 +7,13 @@ export default function Highlights() {
       <h2 className="section-heading">Highlights</h2>
       <div className="entries">
         {highlights.map((h, i) => (
-          <div key={i} className="entry stagger-item">
+          <article key={i} className="entry stagger-item">
             <span className="entry-date">{h.date}</span>
             <h3 className="entry-title">
               <strong>{h.company}</strong> — {h.role}
             </h3>
             {h.description && <p className="entry-desc">{h.description}</p>}
-          </div>
+          </article>
         ))}
       </div>
     </Section>

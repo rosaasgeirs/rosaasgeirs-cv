@@ -2,14 +2,14 @@
   --coral: #8b2252;
   --dark: #1a1a1a;
   --mid: #555555;
-  --light: #888888;
+  --light: #6b6b6b;
   --rule: #dddddd;
   --bg: #f5f3f0;
   --card-bg: #ffffff;
   --coral-tint: rgba(139, 34, 82, 0.08);
-  --section-max-width: 800px;
-  --section-padding: 80px 24px;
-  --section-padding-mobile: 48px 16px;
+  --section-max-width: 50rem;
+  --section-padding: 5rem 1.5rem;
+  --section-padding-mobile: 3rem 1rem;
 
   font-family: "DM Sans", sans-serif;
   color: var(--dark);
@@ -37,5 +37,27 @@ body {
   height: 100svh;
   overflow-y: auto;
   scroll-snap-type: y proximity;
-  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #root {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  background: var(--coral);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 200;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
 }

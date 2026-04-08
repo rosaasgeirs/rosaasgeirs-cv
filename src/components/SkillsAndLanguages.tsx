@@ -19,14 +19,16 @@ export default function SkillsAndLanguages() {
           </div>
         ))}
       </div>
-      <p className="spoken-languages">
-        {languages.map((l, i) => (
-          <span key={l.language}>
-            <strong>{l.language}</strong> ({l.level})
-            {i < languages.length - 1 && " · "}
-          </span>
+      <h3 className="skill-category-label" style={{ marginTop: 32 }}>
+        Spoken Languages
+      </h3>
+      <ul className="spoken-languages">
+        {languages.map((l) => (
+          <li key={l.language}>
+            <strong>{l.language}</strong> — {l.level}
+          </li>
         ))}
-      </p>
+      </ul>
     </Section>
   );
 }

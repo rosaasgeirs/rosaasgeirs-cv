@@ -7,7 +7,7 @@ export default function Hero() {
           <br />
           Ásgeirsdóttir
         </h1>
-        <span className="hero-dash">ㅡ</span>
+        <span className="hero-dash" aria-hidden="true">ㅡ</span>
         <p className="hero-subtitle">Developer &amp; Visual Thinker</p>
         <div className="hero-contact">
           <a href="mailto:rosaasgeirsd@gmail.com">rosaasgeirsd@gmail.com</a>

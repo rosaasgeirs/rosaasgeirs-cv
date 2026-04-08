@@ -3,7 +3,7 @@
 @keyframes reveal {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(2.5rem);
   }
   to {
     opacity: 1;
@@ -46,7 +46,7 @@
 
 .cv-section {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(2.5rem);
   transition:
     opacity 0.7s ease-out,
     transform 0.7s ease-out;
@@ -65,7 +65,7 @@
 
 .stagger-item {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(1.25rem);
   transition:
     opacity 0.5s ease-out,
     transform 0.5s ease-out;
@@ -158,5 +158,24 @@
     animation: draw-line linear both;
     animation-timeline: view();
     animation-range: entry 0% entry 50%;
+  }
+}
+
+/* ─── Reduced motion ──────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .cv-section,
+  .stagger-item,
+  .skill-pill {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .section-divider {
+    animation: none !important;
+    transition: none !important;
+    transform: scaleX(1) !important;
   }
 }

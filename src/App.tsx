@@ -13,13 +13,18 @@ import "./styles/sections.css";
 function App() {
   return (
     <>
+      <a href="#about" className="skip-link">
+        Skip to main content
+      </a>
       <Hero />
-      <About />
-      <Highlights />
-      <Education />
-      <SkillsAndLanguages />
-      <Experience />
-      <Projects />
+      <main>
+        <About />
+        <Highlights />
+        <Education />
+        <SkillsAndLanguages />
+        <Experience />
+        <Projects />
+      </main>
       <Footer />
     </>
   );

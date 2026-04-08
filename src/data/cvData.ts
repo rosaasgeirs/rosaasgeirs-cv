@@ -35,7 +35,7 @@ export const highlights: JobEntry[] = [
     company: "Alda Software",
     role: "Software Developer & UX Specialist",
     description:
-      "Full-stack developer on Alda's core product — a web app, survey tool and suite of micro-learning courses. Work across the stack daily: React, TypeScript and Next.js on the frontend; Python/Django API and AWS infrastructure on the backend. Beyond engineering, I've been involved in shaping the micro-learning content from creative brief through to implementation, collaborated with external agencies on UX research and usability testing, and contributed to the company's growth and marketing work including the Framer website and brand-consistent design assets across digital formats.",
+      "Full-stack developer on Alda's core product — a web app, survey tool and suite of micro-learning courses. Work across the stack daily: React, TypeScript and Next.js on the frontend; Python/Django API and AWS infrastructure on the backend. Beyond engineering, I've been involved in shaping the micro-learning content from creative brief through to implementation, collaborated with external agencies on UX research and usability testing, and contributed to the company's growth and marketing work including the Framer website and brand-consistent design assets across digital formats.  Knowledge of accessibility best practices is important to me which we at Alda ensure in all micro-learning content.",
   },
   {
     date: "December 2023",

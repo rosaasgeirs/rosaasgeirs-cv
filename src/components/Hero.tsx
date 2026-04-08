@@ -11,7 +11,9 @@ export default function Hero() {
         <p className="hero-subtitle">Developer &amp; Visual Thinker</p>
         <div className="hero-contact">
           <a href="mailto:rosaasgeirsd@gmail.com">rosaasgeirsd@gmail.com</a>
-          <a href="tel:6595205">659 5205</a>
+          <a href="https://www.linkedin.com/in/rosa-asgeirsdottir/">
+            linkedin/rosa-asgeirsdottir
+          </a>
           <span>Reykjavík, Iceland</span>
         </div>
       </div>

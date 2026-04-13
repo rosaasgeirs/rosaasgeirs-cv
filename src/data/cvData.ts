@@ -8,9 +8,12 @@ export interface EduEntry {
   institution: string;
 }
 
+export type WorkDetailKeys = "work.stockfish.details" | "work.beautifulbeings.details"
+
 export interface WorkEntry {
   dates: string;
   role: string;
+  detailKey?: WorkDetailKeys;
 }
 
 export interface ProjectEntry {
@@ -97,23 +100,25 @@ export const otherProjects: ProjectEntry[] = [
 
 export const workExperience: WorkEntry[] = [
   { dates: "2024–", role: "Alda Software — Software Developer & UX Specialist" },
-  { dates: "2023–2024", role: "Alda Software — Junior Software Developer & UX Specialist" },
+  { dates: "2023–2024", role: "Alda Software — Junior Software Developer" },
   { dates: "2022–2023", role: "Alda Software — Office Manager & Researcher" },
   { dates: "2022–2023", role: "Tixly — Customer Service Support" },
-  { dates: "2017–2022", role: "Grái Kötturinn Café — Chef and waiter" },
   { dates: "2021", role: "Physical Cinema Festival — Outdoor projection coordinator" },
-  { dates: "2019–2021", role: "Stockfish Film Festival — Program and events manager" },
-  {
+  { dates: "2019–2021", role: "Stockfish Film Festival — Program and events manager", detailKey: "work.stockfish.details" },{
     dates: "2020",
     role: "Beautiful Beings (Join Motion Pictures) — Production Coordinator",
+    detailKey: "work.beautifulbeings.details",
   },
   { dates: "2019", role: "Lamb (Go To Sheep) — Runner" },
   { dates: "2019", role: "Loft Hostel — Reception" },
+  { dates: "2017–2022", role: "Grái Kötturinn Café — Chef and waiter" },
   { dates: "2016–2018", role: "Various Hospitality Positions throughout South America" },
   {
     dates: "2014",
     role: "Anubhuti School, Jalgaon, India — Teaching (Volunteer)",
   },
+  {dates: "2012-2017", role: "Hraðlestin - Waiter" },
+  { dates: "2009–2014", role: "HB Grandi - Fish processing worker" },
 ];
 
 export const sections: CVSection[] = [

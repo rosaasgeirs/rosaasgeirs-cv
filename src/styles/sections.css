@@ -18,7 +18,7 @@ body {
   background: rgba(245, 243, 240, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--rule);
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .nav-links {
@@ -385,6 +385,18 @@ body {
 .work-row .entry-date {
   flex-shrink: 0;
   width: 6.875rem;
+}
+
+.role-and-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.work-details {
+  font-style: italic;
+  font-size: 0.8125rem;
+  color: var(--mid);
 }
 
 .work-role {

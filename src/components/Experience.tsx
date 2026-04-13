@@ -12,7 +12,12 @@ export default function Experience() {
         {workExperience.map((w, i) => (
           <div key={i} className="work-row stagger-item">
             <span className="entry-date">{w.dates || "\u00A0"}</span>
-            <span className="work-role">{w.role}</span>
+            <div className="role-and-details">
+              <span className="work-role">{w.role}</span>
+              <span className="work-details">
+                {w.detailKey ? t(w.detailKey) : "\u00A0"}
+              </span>
+            </div>
           </div>
         ))}
       </div>

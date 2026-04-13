@@ -27,7 +27,7 @@ translations = {
 
     // Bio
     "bio.text":
-      "Developer and visual thinker with roots in both computer science and film. Drawn to the intersection of code and design — building things that work well and look considered. Comfortable across the stack, with a particular focus on frontend and the craft of what users actually see and experience. Adaptable and collaborative, with a passion for learning and evolving alongside the technology.",
+      "Developer and visual thinker with roots in both computer science and film. Drawn to the intersection of code and design — building things that work well and look considered. Comfortable across the stack, with a particular focus on frontend and the craft of what users actually see and experience. Adaptable and collaborative, with a passion for  problem-solving, learning and evolving alongside the technology.",
 
     // Story
     "story.text":
@@ -47,6 +47,10 @@ translations = {
     "edu.udsal":
       "Buenos Aires, Argentina — Exchange student. Cultural Studies & Event Management (60 ECTS)",
     "edu.mr": "Science and Biology department",
+
+    // Experience
+    "work.stockfish.details": "Production and coordination of the film progam and events as well as managing interns and volunteers",
+    "work.beautifulbeings.details": "Production coordination and management of PAs, runners and interns",
 
     // Skills category labels
     "skills.frontend": "Frontend",
@@ -85,7 +89,7 @@ translations = {
 
     // Bio
     "bio.text":
-      "Tölvunarfræðingur með bakgrunn í kvikmyndafræði. Ég heillast af listrænum eiginleikum forritunar og hef gaman af að smíða hluti sem virka vel og líta vel út. Ég nýt mín við framendavinnu jafnt sem bakenda, en hef sérstaka ánægju af því að nostra við það sem notendur sjá og upplifa. Ég hef gaman af samvinnu og af því að læra og þróast í takt við tæknina.",
+      "Tölvunarfræðingur með bakgrunn í kvikmyndafræði. Ég heillast af listrænum eiginleikum forritunar og hef gaman af að smíða hluti sem virka vel og líta vel út. Ég nýt mín við framendavinnu jafnt sem bakenda, en hef sérstaka ánægju af því að leysa vandamál og nostra við það sem notendur sjá og upplifa. Ég hef gaman af samvinnu og af því að læra og þróast í takt við tæknina.",
 
     // Story
     "story.text":
@@ -105,6 +109,10 @@ translations = {
     "edu.udsal":
       "Buenos Aires, Argentína — Skiptinemi. Menningarfræði og viðburðastjórnun (60 ECTS)",
     "edu.mr": "Náttúrufræðideild",
+
+    // Experience
+    "work.stockfish.details": "Skipulag og framleiðsla viðburða og kvikmyndasýninga ásamt því að leiða starfsnema og sjálfboðaliða",
+    "work.beautifulbeings.details": "Samhæfing á milli deilda og almenn framleiðsla ásamt því að leiða PAs, runners og starfsnema",
 
     // Skills category labels
     "skills.frontend": "Framendi",

@@ -1,6 +1,7 @@
 export type Locale = "en" | "is";
 
-const translations = {
+const 
+translations = {
   en: {
     // Nav
     "nav.about": "About",
@@ -94,7 +95,7 @@ const translations = {
     "highlights.alda.date": "Maí 2023 - Núverandi",
     "highlights.alda.desc":
       "Full-stack forritari í öllum helstu lausnum Öldu — vefforrit, könnunartól og örfræðslur. React, TypeScript og Next.js í framenda; Python/Django API og AWS í bakenda. Fyrir utan hugbúnaðarþróun hef ég tekið þátt í mótun og framleiðslu örfræðslunnar frá hugmynd að lokavöru, unnið með utanaðkomandi hönnunarstofum og UX ráðgjöfum, og lagt af mörkum í sölu og markaðsefni fyrirtækisins, þar á meðal Framer vefsíðu og ýmis verkefni í stafrænni hönnun. Þekking á aðgengisstöðlum er mér mikilvæg en við hjá Öldu tryggjum aðgengi í allri örfræðslunni.",
-    "hightlights.frodleiksfusi.date": "Desember 2023",
+    "highlights.frodleiksfusi.date": "Desember 2023",
     "highlights.frodleiksfusi.desc":
       "Þróaði fræðsluleikinn Fróðleiksfúsi fyrir Þekkingarsetur Suðurnesja sem React Native app með headless CMS tengingu í gegnum Apollo GraphQL. Leikurinn var tekinn í notkun strax eftir afhendingu og verkefnið hlaut hæstu einkunn.",
 

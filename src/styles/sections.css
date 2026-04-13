@@ -1,3 +1,125 @@
+/* ─── Body ────────────────────────────── */
+body {
+  background-color: var(--bg);
+}
+
+/* ─── Nav ─────────────────────────────────────── */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background: rgba(245, 243, 240, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+  gap: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--mid);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--coral);
+}
+
+.nav-links a.active {
+  font-weight: 500;
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.locale-toggle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  font-family: inherit;
+}
+
+.locale-toggle[data-locale="en"] {
+  color: var(--coral);
+  border-color: var(--coral);
+}
+
+.locale-toggle[data-locale="is"] {
+  color: var(--leaf);
+  border-color: var(--leaf);
+}
+
+.locale-toggle:hover {
+  opacity: 0.8;
+}
+
+.locale-toggle:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
+.nav-download {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--coral);
+  text-decoration: none;
+  padding: 0.375rem 1rem;
+  border: 1px solid var(--coral);
+  border-radius: 1.25rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-download:hover {
+  background: var(--coral);
+  color: #fff;
+}
+
+.nav-download:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
+@media (max-width: 40rem) {
+  .nav {
+    padding: 0.625rem 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
 /* ─── Section base ────────────────────────────── */
 
 .cv-section {
@@ -8,6 +130,7 @@
   justify-content: center;
   padding: var(--section-padding);
   width: 100%;
+  position: relative;
 }
 
 .cv-section .section-inner {
@@ -21,6 +144,29 @@
 .hero-section {
   text-align: left;
   position: relative;
+}
+
+.hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-photo-wrapper {
+  flex-shrink: 0;
+}
+
+.hero-photo {
+  width: 24rem;
+  height: 24rem;
+  object-fit: cover;
+  object-position: center top;
+  /* border-radius: 8%; */
+  filter: grayscale(20%);
 }
 
 .hero-name {
@@ -72,7 +218,7 @@
   border-radius: 2px;
 }
 
-/* ─── About ───────────────────────────────────── */
+/* ─── About / Bio ─────────────────────────────── */
 
 .about-text {
   font-size: 1.1875rem;
@@ -91,6 +237,20 @@
   text-transform: uppercase;
   color: var(--coral);
   margin-bottom: 2rem;
+}
+
+
+/* -- Story -- */
+
+.story-paragraph {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--dark);
+  margin-bottom: 1.25rem;
+}
+
+.story-paragraph:last-child {
+  margin-bottom: 0;
 }
 
 /* ─── Entries (Highlights, Education, Projects) ─ */
@@ -266,11 +426,53 @@
   margin-bottom: 1rem;
 }
 
+/* ─── Leaf accents ────────────────────────────── */
+
+.leaf-accent {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.05;
+}
+
+.leaf-1 {
+  width: 18rem;
+  top: 15%;
+  right: -2rem;
+  transform: rotate(15deg);
+}
+
+.leaf-2 {
+  width: 14rem;
+  bottom: 5%;
+  left: -2rem;
+  transform: rotate(-20deg);
+}
+
+.leaf-3 {
+  width: 10rem;
+  top: 55%;
+  right: 0;
+  transform: rotate(45deg);
+}
+
 /* ─── Responsive ──────────────────────────────── */
 
 @media (max-width: 40rem) {
   .cv-section {
     padding: var(--section-padding-mobile);
+  }
+
+  .hero-layout {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .hero-photo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
   }
 
   .hero-name {
@@ -290,6 +492,10 @@
     font-size: 1.0625rem;
   }
 
+  .dark-card {
+    padding: 1.5rem;
+  }
+
   .work-row {
     flex-direction: column;
     gap: 0.125rem;
@@ -307,5 +513,9 @@
     left: -1.5rem;
     width: 6px;
     height: 6px;
+  }
+
+  .leaf-accent {
+    display: none;
   }
 }

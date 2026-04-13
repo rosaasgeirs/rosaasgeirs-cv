@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="is">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rósa Ásgeirsdóttir — Ferilskrá</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+                                                                                  rel="stylesheet">
+  <style>
+    :root {
+      --coral: #8B2252;
+      --dark: #1a1a1a;
+      --mid: #555555;
+      --light: #6b6b6b;
+      --rule: #dddddd;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f0eeea;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      color: var(--dark);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+    }
+
+    .page {
+      background: #fff;
+      width: 595px;
+      height: 842px;
+      padding: 44px 44px 40px;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--dark);
+      margin-bottom: 22px;
+    }
+
+    .header-name {
+      font-family: 'Lora', serif;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .header-name::after {
+      content: 'ㅡ';
+      display: block;
+      font-size: 14px;
+      margin-top: 4px;
+      color: var(--coral);
+    }
+
+    .header-contact {
+      text-align: right;
+      font-size: 8.5px;
+      line-height: 1.8;
+      color: var(--mid);
+      font-weight: 300;
+      padding-top: 4px;
+    }
+
+    .header-contact a {
+      color: var(--coral);
+      text-decoration: none;
+    }
+
+    /* Layout */
+    .body {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 28px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sidebar-title {
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 6px;
+    }
+
+    .lang-list {
+      list-style: none;
+      font-size: 8px;
+      line-height: 1.9;
+    }
+
+    .lang-list strong {
+      font-weight: 600;
+    }
+
+    .skill-group {
+      margin-bottom: 8px;
+    }
+
+    .skill-group-label {
+      font-size: 7px;
+      font-weight: 500;
+      color: var(--light);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 3px;
+    }
+
+    .skill-list {
+      list-style: none;
+      font-size: 8px;
+      line-height: 1.85;
+    }
+
+    .skill-list li::before {
+      content: '●';
+      margin-right: 5px;
+      font-size: 5px;
+      vertical-align: middle;
+      color: var(--mid);
+    }
+
+    /* Main */
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .bio {
+      font-size: 9px;
+      line-height: 1.75;
+      text-align: justify;
+    }
+
+    /* Section titles */
+    .section-title {
+      font-size: 8.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 10px;
+    }
+
+    /* Job entries */
+    .job {
+      margin-bottom: 14px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-date {
+      font-size: 7.5px;
+      color: var(--mid);
+      font-weight: 300;
+      margin-bottom: 2px;
+    }
+
+    .job-title-line {
+      font-size: 8.5px;
+      margin-bottom: 4px;
+    }
+
+    .job-title-line .company {
+      font-weight: 600;
+    }
+
+    .job-title-line .role {
+      font-weight: 300;
+    }
+
+    .job-desc {
+      font-size: 8px;
+      line-height: 1.75;
+      text-align: justify;
+    }
+
+    /* Education */
+    .edu-entry {
+      margin-bottom: 8px;
+    }
+
+    .edu-dates {
+      font-size: 7.5px;
+      color: var(--mid);
+      font-weight: 300;
+    }
+
+    .edu-inst {
+      font-size: 8.5px;
+      font-weight: 600;
+    }
+
+    .edu-detail {
+      font-size: 8px;
+      line-height: 1.6;
+      color: var(--mid);
+    }
+
+    /* Work experience */
+    .work-entry {
+      font-size: 8px;
+      line-height: 2;
+      display: flex;
+      gap: 8px;
+    }
+
+    .work-dates {
+      flex-shrink: 0;
+      width: 70px;
+      font-size: 7.5px;
+      color: var(--mid);
+      font-weight: 300;
+    }
+
+    .work-role {
+      color: var(--dark);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-name">Rósa<br>Ásgeirsdóttir</div>
+      <div class="header-contact">
+        Reykjavík, Ísland<br>
+        kt. 230594-3099<br>
+        <a href="mailto:rosaasgeirsd@gmail.com">rosaasgeirsd@gmail.com</a><br>
+        <a href="https://www.rosaasgeirsdottir.info">rosaasgeirsdottir.info</a><br>
+        <a href="tel:6595205">659 5205</a><br>
+      </div>
+    </header>
+
+    <div class="body">
+      <aside class="sidebar">
+        <div>
+          <div class="sidebar-title">Tungumál</div>
+          <ul class="lang-list">
+            <li><strong>Íslenska</strong> — Móðurmál</li>
+            <li><strong>Enska</strong> — Móðurmál</li>
+            <li><strong>Spænska</strong> — Reiprennandi</li>
+          </ul>
+        </div>
+        <div>
+          <div class="sidebar-title">Kunnátta</div>
+          <div class="skill-group">
+            <div class="skill-group-label">Framendi</div>
+            <ul class="skill-list">
+              <li>React</li>
+              <li>React Native</li>
+              <li>Next.js</li>
+              <li>Expo</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Forritunarmál</div>
+            <ul class="skill-list">
+              <li>Typescript</li>
+              <li>Python</li>
+              <li>Javascript</li>
+              <li>Java</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Hönnun</div>
+            <ul class="skill-list">
+              <li>Figma</li>
+              <li>Framer</li>
+              <li>Canva</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <p class="bio">Tölvunarfræðingur með bakgrunn í kvikmyndafræði. Ég heillast af listrænum eiginleikum forritunar
+          og
+          hef gaman af að smíða hluti sem virka vel og líta vel út. Ég nýt mín framenda jafnt sem bakenda, en hef
+          sérstaka ánægju af því að nostra við það sem notendur sjá og upplifa. Ég hef gaman af samvinnu og að læra
+          og þróast í takt við tæknina.</p>
+
+        <div>
+          <div class="section-title">Það helsta</div>
+          <div class="job">
+            <div class="job-date">Maí 2023 – Núverandi</div>
+            <div class="job-title-line">
+              <span class="company">Alda Software</span>
+              <span class="role"> — Software Developer &amp; UX Specialist</span>
+            </div>
+            <p class="job-desc">Full-stack forritari í öllum helstu lausnum Öldu — vefforrit, könnunartól og örfræðslur.
+              React, TypeScript og Next.js í framenda; Python/Django API og AWS í bakenda. Fyrir utan hugbúnaðarþróun
+              hef ég tekið þátt í mótun og framleiðslu örfræðslunnar sem og lagt af mörkum í sölu og markaðsefni
+              fyrirtækisins, þar á meðal Framer vefsíðu og ýmis verkefni í stafrænni hönnun. Þekking á aðgengisstöðlum
+              er mikilvæg í starfinu.</p>
+          </div>
+          <div class="job">
+            <div class="job-date">Desember 2023</div>
+            <div class="job-title-line">
+              <span class="company">Fróðleiksfúsi</span>
+              <span class="role"> — Lokaverkefni</span>
+            </div>
+            <p class="job-desc">Þróaði fræðsluleikinn Fróðleiksfúsi fyrir Þekkingarsetur Suðurnesja sem React Native app
+              með headless CMS tengingu í gegnum Apollo GraphQL. Leikurinn var tekinn í notkun strax eftir afhendingu og
+              verkefnið hlaut hæstu einkunn.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Menntun</div>
+          <div class="edu-entry">
+            <div class="edu-dates">2021–2023</div>
+            <div class="edu-inst">Háskólinn í Reykjavík</div>
+            <div class="edu-detail">Tölvunarfræði BSc — Útskrifaðist með fyrstu einkunn.</div>
+          </div>
+          <div class="edu-entry">
+            <div class="edu-dates">2015–2019</div>
+            <div class="edu-inst">Háskóli Íslands</div>
+            <div class="edu-detail">Kvikmyndafræði BA — Útskrifaðist með fyrstu einkunn.</div>
+          </div>
+          <div class="edu-entry">
+            <div class="edu-dates">2018</div>
+            <div class="edu-inst">Universidad del Salvador</div>
+            <div class="edu-detail">Buenos Aires, Argentína — Skiptinemi. Menningarfræði og viðburðastjórnun (60 ECTS)
+            </div>
+          </div>
+          <div class="edu-entry">
+            <div class="edu-dates">2010–2014</div>
+            <div class="edu-inst">Menntaskólinn í Reykjavík</div>
+            <div class="edu-detail">Náttúrufræðideild</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Starfsreynsla</div>
+          <div class="work-entry"><span class="work-dates">2024–</span><span class="work-role">Alda Software — Software
+              Developer &amp; UX Specialist</span></div>
+          <div class="work-entry"><span class="work-dates">2023–2024</span><span class="work-role">Alda Software —
+              Junior Software Developer &amp; UX Specialist</span></div>
+          <div class="work-entry"><span class="work-dates">2022–2023</span><span class="work-role">Alda Software —
+              Office Manager &amp; Researcher</span></div>
+          <div class="work-entry"><span class="work-dates">2022–2023</span><span class="work-role">Tixly — Customer
+              Service Support</span></div>
+          <div class="work-entry"><span class="work-dates">2021</span><span class="work-role">Physical Cinema Festival —
+              Outdoor projection coordinator</span></div>
+          <div class="work-entry"><span class="work-dates">2020</span><span class="work-role">Beautiful Beings (Join
+              Motion Pictures) — Production Coordinator</span></div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>

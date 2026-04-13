@@ -1,4 +1,6 @@
+import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import Story from "./components/Story";
 import About from "./components/About";
 import Highlights from "./components/Highlights";
 import Education from "./components/Education";
@@ -16,9 +18,11 @@ function App() {
       <a href="#about" className="skip-link">
         Skip to main content
       </a>
+      <Nav />
       <Hero />
       <main>
         <About />
+        <Story />
         <Highlights />
         <Education />
         <SkillsAndLanguages />

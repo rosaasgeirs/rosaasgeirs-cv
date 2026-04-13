@@ -85,7 +85,7 @@ translations = {
 
     // Bio
     "bio.text":
-      "Tölvunarfræðingur með bakgrunn í kvikmyndafræði. Ég heillast af listrænum eiginleikum forritunar og hef gaman af að smíða hluti sem virka vel og líta vel út. Ég nýt mín framenda jafnt sem bakenda, en hef sérstaka ánægju af því að nostra við það sem notendur sjá og upplifa. Ég hef gaman af samvinnu og að læra og þróast í takt við tæknina.",
+      "Tölvunarfræðingur með bakgrunn í kvikmyndafræði. Ég heillast af listrænum eiginleikum forritunar og hef gaman af að smíða hluti sem virka vel og líta vel út. Ég nýt mín við framendavinnu jafnt sem bakenda, en hef sérstaka ánægju af því að nostra við það sem notendur sjá og upplifa. Ég hef gaman af samvinnu og af því að læra og þróast í takt við tæknina.",
 
     // Story
     "story.text":

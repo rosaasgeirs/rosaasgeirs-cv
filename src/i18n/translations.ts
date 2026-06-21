@@ -13,7 +13,7 @@ translations = {
     "nav.download": "Download CV",
 
     // Hero
-    "hero.subtitle": "Developer & Visual Thinker",
+    "hero.subtitle": "Software Engineer & UX Specialist",
     "hero.location": "Reykjavík, Iceland",
 
     // Section headings
@@ -27,7 +27,7 @@ translations = {
 
     // Bio
     "bio.text":
-      "Developer and visual thinker with roots in both computer science and film. Drawn to the intersection of code and design — building things that work well and look considered. Comfortable across the stack, with a particular focus on frontend and the craft of what users actually see and experience. Adaptable and collaborative, with a passion for  problem-solving, learning and evolving alongside the technology.",
+      "Full-stack software engineer and UX specialist who owns work end to end — from problem framing and design through shipped production code. Three years building Alda's micro-learning platform (React/TypeScript/Next.js, Python/Django, AWS), increasingly with AI in the loop. Before tech, coordinated film productions and ran cultural events — building project management instincts and a natural feel for cross-functional collaboration.",
 
     // Story
     "story.text":
@@ -36,10 +36,10 @@ translations = {
     // Highlights
     "highlights.alda.date": "May 2023 - Present",
     "highlights.alda.desc":
-      "Full-stack developer on Alda's core product — a web app, survey tool and suite of micro-learning courses. React, TypeScript and Next.js on the frontend; Python/Django API and AWS infrastructure on the backend. Beyond engineering, I've been involved in shaping the micro-learning content from creative brief through to implementation, collaborated with external agencies on UX research and usability testing, and contributed to the company's growth and marketing work including the Framer website and brand-consistent design assets across digital formats. Knowledge of accessibility best practices is important to me which we at Alda ensure in all micro-learning content.",
+      "Built the micro-learning courses platform from inception — architecture through production, including content production. Over 70 micro-learnings for learners in 50+ countries. Contributed to building an AI training chatbot; use Claude Code in daily development and built AI orchestrators to expand what the team can ship. Implement UX designs from studio partners and create original designs in Figma; build UI components across the full design-to-code workflow. Design and build customer-facing survey reports — data visualizations that make complex results clear and actionable. Drive accessibility practice (WCAG 2.1 AA) across the web app and course content.",
     "highlights.frodleiksfusi.date": "December 2023",
     "highlights.frodleiksfusi.desc":
-      "Developed the educational game Fróðleiksfúsi for Þekkingarsetur Suðurnesja as a React Native app with headless CMS connection using Apollo GraphQL. The game was taken into use directly after delivery and the project received the highest possible marks.",
+      "Educational game for Þekkingarsetur Suðurnesja: React Native + headless CMS via Apollo GraphQL. Collaborated with Jökulá UX/UI design studio. Went into production on delivery; received top marks.",
 
     // Education
     "edu.ru": "Computer Science BSc — Graduated with first class honors.",
@@ -75,7 +75,7 @@ translations = {
     "nav.download": "Sækja ferilskrá",
 
     // Hero
-    "hero.subtitle": "Forritari og sjónrænn hugsuður",
+    "hero.subtitle": "Hugbúnaðarfræðingur & UX sérfræðingur",
     "hero.location": "Reykjavík, Ísland",
 
     // Section headings
@@ -89,7 +89,7 @@ translations = {
 
     // Bio
     "bio.text":
-      "Tölvunarfræðingur með bakgrunn í kvikmyndafræði. Ég heillast af listrænum eiginleikum forritunar og hef gaman af að smíða hluti sem virka vel og líta vel út. Ég nýt mín við framendavinnu jafnt sem bakenda, en hef sérstaka ánægju af því að leysa vandamál og nostra við það sem notendur sjá og upplifa. Ég hef gaman af samvinnu og af því að læra og þróast í takt við tæknina.",
+      "[TRANSLATE] Full-stack hugbúnaðarfræðingur og UX sérfræðingur sem á verkefni frá upphafi til enda — frá vandamálsgreiningu og hönnun til tilbúins kóða í framleiðslu. Þrjú ár við uppbyggingu örfræðslukerfis Öldu (React/TypeScript/Next.js, Python/Django, AWS), æ meira með gervigreind í ferlinu. Áður en ég sneri mér að tækni samhæfði ég kvikmyndaframleiðslu og stjórnaði menningarviðburðum — reynsla sem byggði upp sterka verkefnastjórnunarhæfni og tilfinningu fyrir þverfaglegri samvinnu.",
 
     // Story
     "story.text":
@@ -98,10 +98,10 @@ translations = {
     // Highlights
     "highlights.alda.date": "Maí 2023 - Núverandi",
     "highlights.alda.desc":
-      "Full-stack forritari í öllum helstu lausnum Öldu — vefforrit, könnunartól og örfræðslur. React, TypeScript og Next.js í framenda; Python/Django API og AWS í bakenda. Fyrir utan hugbúnaðarþróun hef ég tekið þátt í mótun og framleiðslu örfræðslunnar frá hugmynd að lokavöru, unnið með utanaðkomandi hönnunarstofum og UX ráðgjöfum, og lagt af mörkum í sölu og markaðsefni fyrirtækisins, þar á meðal Framer vefsíðu og ýmis verkefni í stafrænni hönnun. Þekking á aðgengisstöðlum er mér mikilvæg en við hjá Öldu tryggjum aðgengi í allri örfræðslunni.",
+      "[TRANSLATE] Byggði upp örfræðslukerfið frá grunni — arkitektúr til framleiðslu, þ.m.t. efnisframleiðslu. Yfir 70 örfræðslur fyrir nemendur í 50+ löndum. Tók þátt í að byggja gervigreindardrifinn þjálfunarspjallmenni; nota Claude Code í daglegri þróun og byggði AI orchestrators til að auka afköst teymisins. Útfæri UX hönnun frá samstarfsstofum og bý til upprunalega hönnun í Figma; smíða viðmótseiningar í öllu hönnunar-til-kóða ferlinu. Hanna og smíða könnunarskýrslur fyrir viðskiptavini — gagnasjónræn framsetning sem gerir flóknar niðurstöður skýrar og nothæfar. Keyri aðgengisstaðla (WCAG 2.1 AA) í vefforritinu og örfræðslunni.",
     "highlights.frodleiksfusi.date": "Desember 2023",
     "highlights.frodleiksfusi.desc":
-      "Þróaði fræðsluleikinn Fróðleiksfúsi fyrir Þekkingarsetur Suðurnesja sem React Native app með headless CMS tengingu í gegnum Apollo GraphQL. Leikurinn var tekinn í notkun strax eftir afhendingu og verkefnið hlaut hæstu einkunn.",
+      "Fræðsluleikur fyrir Þekkingarsetur Suðurnesja: React Native + headless CMS í gegnum Apollo GraphQL. Unnið í samstarfi við Jökulá UX/UI hönnunarstofu. Tekinn í notkun strax eftir afhendingu; hlaut hæstu einkunn.",
 
     // Education
     "edu.ru": "Tölvunarfræði BSc — Útskrifaðist með fyrstu einkunn.",

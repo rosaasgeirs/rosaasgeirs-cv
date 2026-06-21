@@ -7,7 +7,7 @@
   <title>Rósa Ásgeirsdóttir — CV</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
-                                                                                  rel="stylesheet">
+    rel="stylesheet">
   <style>
     :root {
       --coral: #8B2252;
@@ -36,18 +36,28 @@
       print-color-adjust: exact;
     }
 
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
     @media print {
       body {
         padding: 0;
         background: #fff;
+      }
+
+      .page {
+        box-shadow: none;
       }
     }
 
     .page {
       background: #fff;
       width: 595px;
-      height: 842px;
-      padding: 22px 40px;
+      min-height: 842px;
+      padding: 20px 40px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
     }
 
     /* Header */
@@ -57,12 +67,12 @@
       align-items: flex-start;
       padding-bottom: 12px;
       border-bottom: 1px solid var(--dark);
-      margin-bottom: 22px;
+      margin-bottom: 14px;
     }
 
     .header-name {
       font-family: 'Lora', serif;
-      font-size: 34px;
+      font-size: 32px;
       font-weight: 400;
       line-height: 1.15;
     }
@@ -81,6 +91,7 @@
       line-height: 1.8;
       color: var(--mid);
       font-weight: 300;
+      font-style: normal;
       padding-top: 4px;
     }
 
@@ -100,7 +111,7 @@
     .sidebar {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
 
     .sidebar-title {
@@ -123,7 +134,11 @@
     }
 
     .skill-group {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
     }
 
     .skill-group-label {
@@ -153,13 +168,12 @@
     .main {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 8px;
     }
 
-    .bio {
+    .summary {
       font-size: 8.5px;
       line-height: 1.75;
-      text-align: justify;
     }
 
     /* Section titles */
@@ -169,12 +183,13 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--coral);
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     /* Job entries */
     .job {
-      margin-bottom: 14px;
+      margin-bottom: 8px;
+      page-break-inside: avoid;
     }
 
     .job:last-child {
@@ -201,15 +216,45 @@
       font-weight: 300;
     }
 
+    .job-progression {
+      font-size: 7px;
+      color: var(--light);
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    .job-bullets {
+      list-style: none;
+      font-size: 8px;
+      line-height: 1.7;
+    }
+
+    .job-bullets li {
+      padding-left: 8px;
+      position: relative;
+      margin-bottom: 1px;
+    }
+
+    .job-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--mid);
+    }
+
     .job-desc {
       font-size: 8px;
       line-height: 1.75;
-      text-align: justify;
     }
 
     /* Education */
     .edu-entry {
-      margin-bottom: 8px;
+      margin-bottom: 4px;
+      page-break-inside: avoid;
+    }
+
+    .edu-entry:last-child {
+      margin-bottom: 0;
     }
 
     .edu-dates {
@@ -229,10 +274,10 @@
       color: var(--mid);
     }
 
-    /* Work experience */
+    /* Work timeline */
     .work-entry {
       font-size: 8px;
-      line-height: 2;
+      line-height: 1.8;
       display: flex;
       gap: 8px;
     }
@@ -252,25 +297,26 @@
     .work-details {
       font-size: 7px;
       color: var(--mid);
+      margin-top: 1px;
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
+  <div class="page" role="document">
     <header class="header">
-      <div class="header-name">Rósa<br>Ásgeirsdóttir</div>
-      <div class="header-contact">
-        Reykjavík, Ísland<br>
-        kt. 230594-3099<br>
+      <h1 class="header-name">Rósa<br>Ásgeirsdóttir</h1>
+      <address class="header-contact">
+        Reykjavík, Iceland<br>
         <a href="mailto:rosaasgeirsd@gmail.com">rosaasgeirsd@gmail.com</a><br>
         <a href="https://www.rosaasgeirsdottir.info">rosaasgeirsdottir.info</a><br>
-        <a href="tel:6595205">[redacted]</a><br>
-      </div>
+        <a href="https://github.com/rosaasgeirs">github.com/rosaasgeirs</a><br>
+        <a href="tel:[redacted]">[redacted]</a>
+      </address>
     </header>
 
     <div class="body">
-      <aside class="sidebar">
+      <aside class="sidebar" aria-label="Skills and languages">
         <div>
           <div class="sidebar-title">Languages</div>
           <ul class="lang-list">
@@ -281,6 +327,14 @@
         </div>
         <div>
           <div class="sidebar-title">Skills</div>
+          <div class="skill-group">
+            <div class="skill-group-label">Design</div>
+            <ul class="skill-list">
+              <li>Figma</li>
+              <li>Framer</li>
+              <li>Canva</li>
+            </ul>
+          </div>
           <div class="skill-group">
             <div class="skill-group-label">Frontend</div>
             <ul class="skill-list">
@@ -293,123 +347,131 @@
           <div class="skill-group">
             <div class="skill-group-label">Languages</div>
             <ul class="skill-list">
-              <li>Typescript</li>
+              <li>TypeScript</li>
               <li>Python</li>
-              <li>Javascript</li>
+              <li>JavaScript</li>
               <li>Java</li>
               <li>SQL</li>
             </ul>
           </div>
           <div class="skill-group">
-            <div class="skill-group-label">Design</div>
+            <div class="skill-group-label">Backend</div>
             <ul class="skill-list">
-              <li>Figma</li>
-              <li>Framer</li>
-              <li>Canva</li>
+              <li>Django</li>
+              <li>AWS</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">AI</div>
+            <ul class="skill-list">
+              <li>Claude Code</li>
+              <li>AI Orchestrators</li>
             </ul>
           </div>
         </div>
       </aside>
 
       <main class="main">
-        <p class="bio">Developer and visual thinker with roots in both computer science and film. Drawn to the
-          intersection of code and design — building things that work well and look considered. Comfortable across the
-          stack, with a particular focus on frontend and the craft of what users actually see and experience. Adaptable
-          and collaborative, with a passion for problem-solving, learning and evolving alongside the technology.</p>
+        <p class="summary">Full-stack software engineer and UX specialist who owns work end to
+          end — from problem framing and design through shipped production code. Three years
+          building Alda's micro-learning platform (React/TypeScript/Next.js, Python/Django, AWS),
+          increasingly with AI in the loop. Before tech, coordinated film productions and ran
+          cultural events — building project management instincts and a natural feel for
+          cross-functional collaboration.</p>
 
-        <div>
-          <div class="section-title">Highlights</div>
+        <section>
+          <h2 class="section-title">Experience</h2>
           <div class="job">
             <div class="job-date">May 2023 – Present</div>
             <div class="job-title-line">
               <span class="company">Alda Software</span>
               <span class="role"> — Software Developer &amp; UX Specialist</span>
             </div>
-            <p class="job-desc">Full-stack developer on Alda's core product — a web app, survey tool and suite of
-              micro-learning courses. React, TypeScript and Next.js on the frontend; Python/Django API and AWS
-              infrastructure on the backend. Beyond engineering, I've been involved in shaping the micro-learning
-              content from creative brief through to implementation as well as contributed company's growth and
-              marketing work including the Framer built website and brand-consistent design assets across digital
-              formats. Knowledge of accessibility is important for the job.</p>
+            <div class="job-progression">Promoted from Junior Developer (2024)</div>
+            <ul class="job-bullets">
+              <li>Built the micro-learning courses platform from inception — architecture through
+                production, including content production. Over 70 micro-learnings for learners
+                in 50+ countries.</li>
+              <li>Contributed to building an AI training chatbot. Use Claude Code in daily
+                development; research and evaluate emerging tools and built AI orchestrators
+                to expand what the team can ship.</li>
+              <li>Implement UX designs from studio partners and create original designs in Figma;
+                build UI components and interface elements — comfortable across the full
+                design-to-code workflow.</li>
+              <li>Design and build customer-facing survey reports — data visualizations that make
+                complex results clear and actionable.</li>
+              <li>Drive accessibility practice (WCAG 2.1 AA) across the web app and course content.</li>
+              <li>Developed team-building and leadership skills through Alda's own leadership-focused
+                program and hands-on practice; run team retrospectives and shape ways of working
+                that benefit each team's dynamic. Ready to take on greater responsibility in
+                shaping team culture and ways of working.</li>
+            </ul>
           </div>
           <div class="job">
             <div class="job-date">December 2023</div>
             <div class="job-title-line">
               <span class="company">Fróðleiksfúsi</span>
-              <span class="role"> — Final Project</span>
+              <span class="role"> — Final Project, Reykjavík University</span>
             </div>
-            <p class="job-desc">Developed the educational game Fróðleiksfúsi for Þekkingarsetur Suðurnesja as a React
-              Native app with headless CMS connection using Apollo GraphQL. The game was taken into use directly after
-              delivery and the project received the highest possible marks.</p>
+            <p class="job-desc">Educational game for Þekkingarsetur Suðurnesja: React Native +
+              headless CMS via Apollo GraphQL. Collaborated with Jökulá UX/UI design studio.
+              Went into production on delivery; received top marks.</p>
           </div>
-        </div>
+        </section>
 
-        <div>
-          <div class="section-title">Education</div>
+        <section>
+          <h2 class="section-title">Education</h2>
           <div class="edu-entry">
             <div class="edu-dates">2021–2023</div>
             <div class="edu-inst">Reykjavík University</div>
-            <div class="edu-detail">Computer Science BSc — Graduated with first class honors.</div>
+            <div class="edu-detail">Computer Science BSc — First class honors</div>
           </div>
           <div class="edu-entry">
             <div class="edu-dates">2015–2019</div>
             <div class="edu-inst">University of Iceland</div>
-            <div class="edu-detail">Film Studies BA — Graduated with first class honors.</div>
+            <div class="edu-detail">Film Studies BA — First class honors</div>
           </div>
           <div class="edu-entry">
             <div class="edu-dates">2018</div>
-            <div class="edu-inst">Universidad del Salvador</div>
-            <div class="edu-detail">Buenos Aires, Argentina — Exchange student. Cultural Studies &amp; Event Management
-              (60 ECTS)</div>
+            <div class="edu-inst">Universidad del Salvador, Buenos Aires</div>
+            <div class="edu-detail">Exchange — Cultural Studies &amp; Event Management (60 ECTS)</div>
           </div>
           <div class="edu-entry">
             <div class="edu-dates">2010–2014</div>
             <div class="edu-inst">Menntaskólinn í Reykjavík</div>
-            <div class="edu-detail">Science and Biology department</div>
+            <div class="edu-detail">Science and Biology</div>
           </div>
-        </div>
+        </section>
 
-        <div>
-          <div class="section-title">Work Experience</div>
+        <section>
+          <h2 class="section-title">Earlier Roles</h2>
           <div class="work-entry">
-            <span class="work-dates">2024–present</span>
-            <div><span class="work-role">Alda Software — Software Developer &amp; UX Specialist</span>
-            </div>
-          </div>
-          <div class="work-entry">
-            <span class="work-dates">2023–2024</span>
-            <div><span class="work-role">Alda Software — Junior Software Developer</span>
-            </div>
+            <span class="work-dates">2022–2023</span>
+            <span class="work-role">Alda Software — Office Manager &amp; Researcher</span>
           </div>
           <div class="work-entry">
             <span class="work-dates">2022–2023</span>
-            <div><span class="work-role">Alda Software — Office Manager &amp; Researcher</span>
-            </div>
-          </div>
-          <div class="work-entry">
-            <span class="work-dates">2022–2023</span>
-            <div><span class="work-role">Tixly — Customer Service Support</span>
-            </div>
+            <span class="work-role">Tixly — Customer Service</span>
           </div>
           <div class="work-entry">
             <span class="work-dates">2021</span>
-            <div><span class="work-role">Physical Cinema Festival — Outdoor projection coordinator</span>
-            </div>
+            <span class="work-role">Physical Cinema Festival — Outdoor Projection Coordinator</span>
           </div>
           <div class="work-entry">
             <span class="work-dates">2020</span>
-            <div><span class="work-role">Beautiful Beings (Join Motion Pictures) — Production Coordinator</span>
-              <div class="work-details">- Production coordination and management of PAs, runners and interns</div>
+            <div>
+              <span class="work-role">Beautiful Beings (Join Motion Pictures) — Production Coordinator</span>
+              <div class="work-details">Coordinated production; supervised production assistants, runners and interns</div>
             </div>
           </div>
           <div class="work-entry">
-            <span class="work-dates">2019-2020</span>
-            <div><span class="work-role">Stockfish Film Festival — Program and events manager</span>
-              <div class="work-details">- Production of the film progam and events as well as managing
-                interns and volunteers</div>
+            <span class="work-dates">2019–2020</span>
+            <div>
+              <span class="work-role">Stockfish Film Festival — Program &amp; Events Manager</span>
+              <div class="work-details">Managed film program and events; supervised interns and volunteers</div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
     </div>
   </div>

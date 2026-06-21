@@ -7,7 +7,7 @@
   <title>Rósa Ásgeirsdóttir — Ferilskrá</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
-                                                                                  rel="stylesheet">
+    rel="stylesheet">
   <style>
     :root {
       --coral: #8B2252;
@@ -36,18 +36,28 @@
       print-color-adjust: exact;
     }
 
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
     @media print {
       body {
         padding: 0;
         background: #fff;
+      }
+
+      .page {
+        box-shadow: none;
       }
     }
 
     .page {
       background: #fff;
       width: 595px;
-      height: 842px;
-      padding: 22px 40px;
+      min-height: 842px;
+      padding: 20px 40px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
     }
 
     /* Header */
@@ -57,12 +67,12 @@
       align-items: flex-start;
       padding-bottom: 12px;
       border-bottom: 1px solid var(--dark);
-      margin-bottom: 22px;
+      margin-bottom: 14px;
     }
 
     .header-name {
       font-family: 'Lora', serif;
-      font-size: 34px;
+      font-size: 32px;
       font-weight: 400;
       line-height: 1.15;
     }
@@ -81,6 +91,7 @@
       line-height: 1.8;
       color: var(--mid);
       font-weight: 300;
+      font-style: normal;
       padding-top: 4px;
     }
 
@@ -100,7 +111,7 @@
     .sidebar {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
 
     .sidebar-title {
@@ -123,7 +134,11 @@
     }
 
     .skill-group {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
     }
 
     .skill-group-label {
@@ -153,13 +168,12 @@
     .main {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 8px;
     }
 
-    .bio {
+    .summary {
       font-size: 8.5px;
       line-height: 1.75;
-      text-align: justify;
     }
 
     /* Section titles */
@@ -169,12 +183,13 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--coral);
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     /* Job entries */
     .job {
-      margin-bottom: 14px;
+      margin-bottom: 8px;
+      page-break-inside: avoid;
     }
 
     .job:last-child {
@@ -201,15 +216,45 @@
       font-weight: 300;
     }
 
+    .job-progression {
+      font-size: 7px;
+      color: var(--light);
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    .job-bullets {
+      list-style: none;
+      font-size: 8px;
+      line-height: 1.7;
+    }
+
+    .job-bullets li {
+      padding-left: 8px;
+      position: relative;
+      margin-bottom: 1px;
+    }
+
+    .job-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--mid);
+    }
+
     .job-desc {
       font-size: 8px;
       line-height: 1.75;
-      text-align: justify;
     }
 
     /* Education */
     .edu-entry {
-      margin-bottom: 8px;
+      margin-bottom: 4px;
+      page-break-inside: avoid;
+    }
+
+    .edu-entry:last-child {
+      margin-bottom: 0;
     }
 
     .edu-dates {
@@ -229,10 +274,10 @@
       color: var(--mid);
     }
 
-    /* Work experience */
+    /* Work timeline */
     .work-entry {
       font-size: 8px;
-      line-height: 2;
+      line-height: 1.8;
       display: flex;
       gap: 8px;
     }
@@ -252,25 +297,26 @@
     .work-details {
       font-size: 7px;
       color: var(--mid);
+      margin-top: 1px;
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
+  <div class="page" role="document">
     <header class="header">
-      <div class="header-name">Rósa<br>Ásgeirsdóttir</div>
-      <div class="header-contact">
+      <h1 class="header-name">Rósa<br>Ásgeirsdóttir</h1>
+      <address class="header-contact">
         Reykjavík, Ísland<br>
-        kt. 230594-3099<br>
         <a href="mailto:rosaasgeirsd@gmail.com">rosaasgeirsd@gmail.com</a><br>
         <a href="https://www.rosaasgeirsdottir.info">rosaasgeirsdottir.info</a><br>
-        <a href="tel:6595205">[redacted]</a><br>
-      </div>
+        <a href="https://github.com/rosaasgeirs">github.com/rosaasgeirs</a><br>
+        <a href="tel:[redacted]">[redacted]</a>
+      </address>
     </header>
 
     <div class="body">
-      <aside class="sidebar">
+      <aside class="sidebar" aria-label="Kunnátta og tungumál">
         <div>
           <div class="sidebar-title">Tungumál</div>
           <ul class="lang-list">
@@ -281,6 +327,14 @@
         </div>
         <div>
           <div class="sidebar-title">Kunnátta</div>
+          <div class="skill-group">
+            <div class="skill-group-label">Hönnun</div>
+            <ul class="skill-list">
+              <li>Figma</li>
+              <li>Framer</li>
+              <li>Canva</li>
+            </ul>
+          </div>
           <div class="skill-group">
             <div class="skill-group-label">Framendi</div>
             <ul class="skill-list">
@@ -293,130 +347,138 @@
           <div class="skill-group">
             <div class="skill-group-label">Forritunarmál</div>
             <ul class="skill-list">
-              <li>Typescript</li>
+              <li>TypeScript</li>
               <li>Python</li>
-              <li>Javascript</li>
+              <li>JavaScript</li>
               <li>Java</li>
               <li>SQL</li>
             </ul>
           </div>
           <div class="skill-group">
-            <div class="skill-group-label">Hönnun</div>
+            <div class="skill-group-label">Bakendi</div>
             <ul class="skill-list">
-              <li>Figma</li>
-              <li>Framer</li>
-              <li>Canva</li>
+              <li>Django</li>
+              <li>AWS</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Gervigreind</div>
+            <ul class="skill-list">
+              <li>Claude Code</li>
+              <li>AI Orchestrators</li>
             </ul>
           </div>
         </div>
       </aside>
 
       <main class="main">
-        <p class="bio">Tölvunarfræðingur með bakgrunn í kvikmyndafræði. Ég heillast af listrænum eiginleikum forritunar
-          og
-          hef gaman af að smíða hluti sem virka vel og líta vel út. Ég nýt mín við framendavinnu jafnt sem bakenda, en
-          hef
-          sérstaka ánægju af því að leysa vandamál og nostra við það sem notendur sjá og upplifa. Ég hef gaman af
-          samvinnu og af því að
-          læra
-          og þróast í takt við tæknina.</p>
+        <!-- [EN: Full-stack software engineer and UX specialist who owns work end to end — from problem framing and design through shipped production code. Three years building Alda's micro-learning platform (React/TypeScript/Next.js, Python/Django, AWS), increasingly with AI in the loop. Before tech, coordinated film productions and ran cultural events — building project management instincts and a natural feel for cross-functional collaboration.] -->
+        <p class="summary">[TRANSLATE] Full-stack hugbúnaðarfræðingur og UX sérfræðingur sem á verkefni frá
+          upphafi til enda — frá vandamálsgreiningu og hönnun til tilbúins kóða í framleiðslu. Þrjú ár
+          við uppbyggingu örfræðslukerfis Öldu (React/TypeScript/Next.js, Python/Django, AWS), æ
+          meira með gervigreind í ferlinu. Áður en ég sneri mér að tækni samhæfði ég
+          kvikmyndaframleiðslu og stjórnaði menningarviðburðum — reynsla sem byggði upp sterka
+          verkefnastjórnunarhæfni og tilfinningu fyrir þverfaglegri samvinnu.</p>
 
-        <div>
-          <div class="section-title">Það helsta</div>
+        <section>
+          <h2 class="section-title">Reynsla</h2>
           <div class="job">
             <div class="job-date">Maí 2023 – Núverandi</div>
             <div class="job-title-line">
               <span class="company">Alda Software</span>
               <span class="role"> — Software Developer &amp; UX Specialist</span>
             </div>
-            <p class="job-desc">Full-stack forritari í öllum helstu lausnum Öldu — vefforrit, könnunartól og örfræðslur.
-              React, TypeScript og Next.js í framenda; Python/Django API og AWS í bakenda. Fyrir utan hugbúnaðarþróun
-              hef ég tekið þátt í mótun og framleiðslu örfræðslunnar sem og lagt af mörkum í sölu og markaðsefni
-              fyrirtækisins, þar á meðal Framer vefsíðu og ýmis verkefni í stafrænni hönnun. Þekking á aðgengisstöðlum
-              er mikilvæg í starfinu.</p>
+            <div class="job-progression">Stöðuhækkun frá stöðu Junior Developer (2024)</div>
+            <ul class="job-bullets">
+              <!-- [EN: Built the micro-learning courses platform from inception — architecture through production, including content production. Over 70 micro-learnings for learners in 50+ countries.] -->
+              <li>[TRANSLATE] Byggði upp örfræðslukerfið frá grunni — arkitektúr til framleiðslu,
+                þ.m.t. efnisframleiðslu. Yfir 70 örfræðslur fyrir nemendur í 50+ löndum.</li>
+              <!-- [EN: Contributed to building an AI training chatbot. Use Claude Code in daily development; research and evaluate emerging tools and built AI orchestrators to expand what the team can ship.] -->
+              <li>[TRANSLATE] Tók þátt í að byggja gervigreindardrifinn þjálfunarspjallmenni. Nota
+                Claude Code í daglegri þróun; rannsaka og meta ný tól og byggði AI orchestrators
+                til að auka afköst teymisins.</li>
+              <!-- [EN: Implement UX designs from studio partners and create original designs in Figma; build UI components and interface elements — comfortable across the full design-to-code workflow.] -->
+              <li>[TRANSLATE] Útfæri UX hönnun frá samstarfsstofum og bý til upprunalega hönnun í
+                Figma; smíða viðmótseiningar og viðmótsþætti — vel að mér í öllu
+                hönnunar-til-kóða ferlinu.</li>
+              <!-- [EN: Design and build customer-facing survey reports — data visualizations that make complex results clear and actionable.] -->
+              <li>[TRANSLATE] Hanna og smíða könnunarskýrslur fyrir viðskiptavini — gagnasjónræn
+                framsetning sem gerir flóknar niðurstöður skýrar og nothæfar.</li>
+              <!-- [EN: Drive accessibility practice (WCAG 2.1 AA) across the web app and course content.] -->
+              <li>[TRANSLATE] Keyri aðgengisstaðla (WCAG 2.1 AA) í vefforritinu og örfræðslunni.</li>
+              <!-- [EN: Developed team-building and leadership skills through Alda's own leadership-focused program and hands-on practice; run team retrospectives and shape ways of working that benefit each team's dynamic. Ready to take on greater responsibility in shaping team culture and ways of working.] -->
+              <li>[TRANSLATE] Þróaði teymisuppbyggingu og leiðtogahæfni í gegnum leiðtogamiðað
+                námsefni Öldu og reynslu; stýri yfirferðum (retros) og móta vinnubrögð sem
+                henta sérhverju teymi. Tilbúin að taka á mig meiri ábyrgð í mótun
+                teymismenningar og vinnubragða.</li>
+            </ul>
           </div>
           <div class="job">
             <div class="job-date">Desember 2023</div>
             <div class="job-title-line">
               <span class="company">Fróðleiksfúsi</span>
-              <span class="role"> — Lokaverkefni</span>
+              <span class="role"> — Lokaverkefni, Háskólinn í Reykjavík</span>
             </div>
-            <p class="job-desc">Þróaði fræðsluleikinn Fróðleiksfúsi fyrir Þekkingarsetur Suðurnesja sem React Native app
-              með headless CMS tengingu í gegnum Apollo GraphQL. Leikurinn var tekinn í notkun strax eftir afhendingu og
-              verkefnið hlaut hæstu einkunn.</p>
+            <!-- [EN: Educational game for Þekkingarsetur Suðurnesja: React Native + headless CMS via Apollo GraphQL. Collaborated with Jökulá UX/UI design studio. Went into production on delivery; received top marks.] -->
+            <p class="job-desc">Fræðsluleikur fyrir Þekkingarsetur Suðurnesja: React Native +
+              headless CMS í gegnum Apollo GraphQL. Unnið í samstarfi við Jökulá UX/UI
+              hönnunarstofu. Tekinn í notkun strax eftir afhendingu; hlaut hæstu einkunn.</p>
           </div>
-        </div>
+        </section>
 
-        <div>
-          <div class="section-title">Menntun</div>
+        <section>
+          <h2 class="section-title">Menntun</h2>
           <div class="edu-entry">
             <div class="edu-dates">2021–2023</div>
             <div class="edu-inst">Háskólinn í Reykjavík</div>
-            <div class="edu-detail">Tölvunarfræði BSc — Útskrifaðist með fyrstu einkunn.</div>
+            <div class="edu-detail">Tölvunarfræði BSc — Fyrsta einkunn</div>
           </div>
           <div class="edu-entry">
             <div class="edu-dates">2015–2019</div>
             <div class="edu-inst">Háskóli Íslands</div>
-            <div class="edu-detail">Kvikmyndafræði BA — Útskrifaðist með fyrstu einkunn.</div>
+            <div class="edu-detail">Kvikmyndafræði BA — Fyrsta einkunn</div>
           </div>
           <div class="edu-entry">
             <div class="edu-dates">2018</div>
-            <div class="edu-inst">Universidad del Salvador</div>
-            <div class="edu-detail">Buenos Aires, Argentína — Skiptinemi. Menningarfræði og viðburðastjórnun (60 ECTS)
-            </div>
+            <div class="edu-inst">Universidad del Salvador, Buenos Aires</div>
+            <div class="edu-detail">Skiptinemi — Menningarfræði og viðburðastjórnun (60 ECTS)</div>
           </div>
           <div class="edu-entry">
             <div class="edu-dates">2010–2014</div>
             <div class="edu-inst">Menntaskólinn í Reykjavík</div>
             <div class="edu-detail">Náttúrufræðideild</div>
           </div>
-        </div>
+        </section>
 
-        <div>
-          <div class="section-title">Starfsreynsla</div>
+        <section>
+          <h2 class="section-title">Fyrri störf</h2>
           <div class="work-entry">
-            <span class="work-dates">2024–</span>
-            <div><span class="work-role">Alda Software — Software Developer &amp; UX Specialist</span>
-            </div>
-          </div>
-          <div class="work-entry">
-            <span class="work-dates">2023–2024</span>
-            <div><span class="work-role">Alda Software — Junior Software Developer</span>
-            </div>
+            <span class="work-dates">2022–2023</span>
+            <span class="work-role">Alda Software — Office Manager &amp; Researcher</span>
           </div>
           <div class="work-entry">
             <span class="work-dates">2022–2023</span>
-            <div><span class="work-role">Alda Software — Office Manager &amp; Researcher</span>
-              <div class="work-details"></div>
-            </div>
-          </div>
-          <div class="work-entry">
-            <span class="work-dates">2022–2023</span>
-            <div><span class="work-role">Tixly — Customer Service Support</span>
-              <div class="work-details"></div>
-            </div>
+            <span class="work-role">Tixly — Customer Service</span>
           </div>
           <div class="work-entry">
             <span class="work-dates">2021</span>
-            <div><span class="work-role">Physical Cinema Festival — Outdoor projection coordinator</span>
-              <div class="work-details"></div>
-            </div>
+            <span class="work-role">Physical Cinema Festival — Outdoor Projection Coordinator</span>
           </div>
           <div class="work-entry">
             <span class="work-dates">2020</span>
-            <div><span class="work-role">Beautiful Beings (Join Motion Pictures) — Production Coordinator</span>
-              <div class="work-details">- Samhæfing á milli deilda og almenn framleiðsla ásamt því að leiða PAs,
-                runners og starfsnema</div>
+            <div>
+              <span class="work-role">Beautiful Beings (Join Motion Pictures) — Production Coordinator</span>
+              <div class="work-details">Samhæfing framleiðslu; leiddi aðstoðarfólk, runners og starfsnema</div>
             </div>
           </div>
           <div class="work-entry">
-            <span class="work-dates">2019-2020</span>
-            <div><span class="work-role">Stockfish Film Festival — Program and events manager</span>
-              <div class="work-details">- Skipulag og framleiðsla viðburða og kvikmyndasýninga ásamt því að leiða
-                starfsnema og sjálfboðaliða</div>
+            <span class="work-dates">2019–2020</span>
+            <div>
+              <span class="work-role">Stockfish Film Festival — Program &amp; Events Manager</span>
+              <div class="work-details">Skipulag kvikmyndadagskrár og viðburða; leiddi starfsnema og sjálfboðaliða</div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
     </div>
   </div>

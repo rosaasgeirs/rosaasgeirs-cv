@@ -10,7 +10,6 @@ export default function Footer() {
       <div className="footer-name">{t("footer.name")}</div>
       <div className="footer-contact">
         <a href="mailto:rosaasgeirsd@gmail.com">rosaasgeirsd@gmail.com</a>
-        <a href="tel:6595205">[redacted]</a>
         <span>{t("hero.location")}</span>
       </div>
     </Section>

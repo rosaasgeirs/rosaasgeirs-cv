@@ -12,7 +12,8 @@ const navItems = [
 ];
 
 export default function Nav() {
-  const { locale, setLocale, t } = useLocale();
+  // `setLocale` is unused while the Icelandic toggle is hidden — re-add it when restoring the button.
+  const { locale, t } = useLocale();
   const sectionIds = useMemo(() => navItems.map((n) => n.href), []);
   const active = useActiveSection(sectionIds);
 
@@ -31,7 +32,9 @@ export default function Nav() {
         ))}
       </ul>
       <div className="nav-actions">
-        <button
+        {/* Icelandic language toggle — hidden for now (English-only).
+            Re-enable by uncommenting this button to restore the IS/EN switch. */}
+        {/* <button
           className="locale-toggle"
           data-locale={locale}
           onClick={() => setLocale(locale === "en" ? "is" : "en")}
@@ -41,7 +44,7 @@ export default function Nav() {
           type="button"
         >
           {locale === "en" ? "IS" : "EN"}
-        </button>
+        </button> */}
         <a
           href={`/Rosa_Asgeirsdottir_CV_${locale.toUpperCase()}.pdf`}
           download

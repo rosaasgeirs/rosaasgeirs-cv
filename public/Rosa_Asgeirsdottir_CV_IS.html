@@ -49,6 +49,11 @@
 
       .page {
         box-shadow: none;
+        /* 595x842 is A4 at 72dpi; browsers render CSS px at 96dpi.
+           Scale up to fill a real A4 sheet (same aspect ratio).
+           1.333 fills exactly; verified single-page (1.34 spills to a 2nd page).
+           Requires the print dialog set to Margins: None. */
+        zoom: 1.333;
       }
     }
 
@@ -310,8 +315,7 @@
         Reykjavík, Ísland<br>
         <a href="mailto:rosaasgeirsd@gmail.com">rosaasgeirsd@gmail.com</a><br>
         <a href="https://www.rosaasgeirsdottir.info">rosaasgeirsdottir.info</a><br>
-        <a href="https://github.com/rosaasgeirs">github.com/rosaasgeirs</a><br>
-        <a href="tel:[redacted]">[redacted]</a>
+        <a href="https://github.com/rosaasgeirs">github.com/rosaasgeirs</a>
       </address>
     </header>
 
@@ -332,7 +336,6 @@
             <ul class="skill-list">
               <li>Figma</li>
               <li>Framer</li>
-              <li>Canva</li>
             </ul>
           </div>
           <div class="skill-group">
@@ -341,31 +344,32 @@
               <li>React</li>
               <li>React Native</li>
               <li>Next.js</li>
-              <li>Expo</li>
+              <li>Sass</li>
             </ul>
           </div>
           <div class="skill-group">
             <div class="skill-group-label">Forritunarmál</div>
             <ul class="skill-list">
-              <li>TypeScript</li>
+              <li>TypeScript / JavaScript</li>
               <li>Python</li>
-              <li>JavaScript</li>
-              <li>Java</li>
               <li>SQL</li>
             </ul>
           </div>
           <div class="skill-group">
-            <div class="skill-group-label">Bakendi</div>
+            <div class="skill-group-label">Bakendi &amp; API</div>
             <ul class="skill-list">
               <li>Django</li>
-              <li>AWS</li>
+              <li>REST API</li>
+              <li>GraphQL</li>
+              <li>PostgreSQL</li>
             </ul>
           </div>
           <div class="skill-group">
-            <div class="skill-group-label">Gervigreind</div>
+            <div class="skill-group-label">Ský &amp; verkfæri</div>
             <ul class="skill-list">
-              <li>Claude Code</li>
-              <li>AI Orchestrators</li>
+              <li>AWS</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
             </ul>
           </div>
         </div>
@@ -373,34 +377,28 @@
 
       <main class="main">
         <!-- [EN: Full-stack software engineer and UX specialist who owns work end to end — from problem framing and design through shipped production code. Three years building Alda's micro-learning platform (React/TypeScript/Next.js, Python/Django, AWS), increasingly with AI in the loop. Before tech, coordinated film productions and ran cultural events — building project management instincts and a natural feel for cross-functional collaboration.] -->
-        <p class="summary">[TRANSLATE] Full-stack hugbúnaðarfræðingur og UX sérfræðingur sem á verkefni frá
-          upphafi til enda — frá vandamálsgreiningu og hönnun til tilbúins kóða í framleiðslu. Þrjú ár
-          við uppbyggingu örfræðslukerfis Öldu (React/TypeScript/Next.js, Python/Django, AWS), æ
-          meira með gervigreind í ferlinu. Áður en ég sneri mér að tækni samhæfði ég
-          kvikmyndaframleiðslu og stjórnaði menningarviðburðum — reynsla sem byggði upp sterka
-          verkefnastjórnunarhæfni og tilfinningu fyrir þverfaglegri samvinnu.</p>
+        <p class="summary">Tölvunarfræðingur með bakgrunn í kvikmyndafræði. Ég heillast af listrænum eiginleikum forritunar og hef gaman af að smíða hluti sem virka vel og líta vel út. Ég nýt mín við framendavinnu jafnt sem bakenda, en hef sérstaka ánægju af því að leysa vandamál og nostra við það sem notendur sjá og upplifa. Ég hef gaman af samvinnu og af því að læra og þróast í takt við tæknina þar með talin verkferla byggða í kringum gervigreind.
+
+</p>
 
         <section>
           <h2 class="section-title">Reynsla</h2>
           <div class="job">
             <div class="job-date">Maí 2023 – Núverandi</div>
             <div class="job-title-line">
-              <span class="company">Alda Software</span>
+              <span class="company">Alda Solutions</span>
               <span class="role"> — Software Developer &amp; UX Specialist</span>
             </div>
             <div class="job-progression">Stöðuhækkun frá stöðu Junior Developer (2024)</div>
             <ul class="job-bullets">
               <!-- [EN: Built the micro-learning courses platform from inception — architecture through production, including content production. Over 70 micro-learnings for learners in 50+ countries.] -->
-              <li>[TRANSLATE] Byggði upp örfræðslukerfið frá grunni — arkitektúr til framleiðslu,
-                þ.m.t. efnisframleiðslu. Yfir 70 örfræðslur fyrir nemendur í 50+ löndum.</li>
+              <li>Byggði upp örfræðslu frá grunni þ.m.t. framleiðslu á erfni. Yfir 70 örfræðslur og notendur í yfir 50 löndum.</li>
               <!-- [EN: Contributed to building an AI training chatbot. Use Claude Code in daily development; research and evaluate emerging tools and built AI orchestrators to expand what the team can ship.] -->
-              <li>[TRANSLATE] Tók þátt í að byggja gervigreindardrifinn þjálfunarspjallmenni. Nota
-                Claude Code í daglegri þróun; rannsaka og meta ný tól og byggði AI orchestrators
-                til að auka afköst teymisins.</li>
+              <li>Tók þátt í að byggja gervigreindardrifið spjallmenni. Nota
+                Claude Code í daglegri þróun, einnig rannsaka og meta ný tól til að auka afköst og nákvæmni.</li>
               <!-- [EN: Implement UX designs from studio partners and create original designs in Figma; build UI components and interface elements — comfortable across the full design-to-code workflow.] -->
-              <li>[TRANSLATE] Útfæri UX hönnun frá samstarfsstofum og bý til upprunalega hönnun í
-                Figma; smíða viðmótseiningar og viðmótsþætti — vel að mér í öllu
-                hönnunar-til-kóða ferlinu.</li>
+              <li>Útfæri UX/UI hönnun frá hönnunarstofum sem og hanna á eigin vegum í
+                Figma.</li>
               <!-- [EN: Design and build customer-facing survey reports — data visualizations that make complex results clear and actionable.] -->
               <li>[TRANSLATE] Hanna og smíða könnunarskýrslur fyrir viðskiptavini — gagnasjónræn
                 framsetning sem gerir flóknar niðurstöður skýrar og nothæfar.</li>
@@ -454,7 +452,7 @@
           <h2 class="section-title">Fyrri störf</h2>
           <div class="work-entry">
             <span class="work-dates">2022–2023</span>
-            <span class="work-role">Alda Software — Office Manager &amp; Researcher</span>
+            <span class="work-role">Alda Solutions — Office Manager &amp; Researcher</span>
           </div>
           <div class="work-entry">
             <span class="work-dates">2022–2023</span>

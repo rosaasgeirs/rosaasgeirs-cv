@@ -7,7 +7,7 @@
   <title>Rósa Ásgeirsdóttir — CV</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
+                                                                                  rel="stylesheet">
   <style>
     :root {
       --coral: #8B2252;
@@ -49,6 +49,11 @@
 
       .page {
         box-shadow: none;
+        /* 595x842 is A4 at 72dpi; browsers render CSS px at 96dpi.
+           Scale up to fill a real A4 sheet (same aspect ratio).
+           1.333 fills exactly; verified single-page (1.34 spills to a 2nd page).
+           Requires the print dialog set to Margins: None. */
+        zoom: 1.333;
       }
     }
 
@@ -65,7 +70,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding-bottom: 12px;
+      padding-bottom: 14px;
       border-bottom: 1px solid var(--dark);
       margin-bottom: 14px;
     }
@@ -75,14 +80,6 @@
       font-size: 32px;
       font-weight: 400;
       line-height: 1.15;
-    }
-
-    .header-name::after {
-      content: 'ㅡ';
-      display: block;
-      font-size: 14px;
-      margin-top: 4px;
-      color: var(--coral);
     }
 
     .header-contact {
@@ -164,11 +161,48 @@
       color: var(--mid);
     }
 
+    /* References */
+    .ref {
+      margin-bottom: 7px;
+    }
+
+    .ref:last-child {
+      margin-bottom: 0;
+    }
+
+    .ref-name {
+      font-size: 8px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .ref-title {
+      font-size: 7px;
+      color: var(--light);
+      line-height: 1.5;
+      margin-bottom: 1px;
+    }
+
+    .ref-contact {
+      display: block;
+      font-size: 7px;
+      line-height: 1.5;
+      color: var(--coral);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .ref-phone {
+      font-size: 7px;
+      line-height: 1.5;
+      color: var(--mid);
+    }
+
     /* Main */
     .main {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 16px;
     }
 
     .summary {
@@ -309,9 +343,7 @@
       <address class="header-contact">
         Reykjavík, Iceland<br>
         <a href="mailto:rosaasgeirsd@gmail.com">rosaasgeirsd@gmail.com</a><br>
-        <a href="https://www.rosaasgeirsdottir.info">rosaasgeirsdottir.info</a><br>
-        <a href="https://github.com/rosaasgeirs">github.com/rosaasgeirs</a><br>
-        <a href="tel:[redacted]">[redacted]</a>
+        <a href="https://www.rosaasgeirsdottir.info">rosaasgeirsdottir.info</a>
       </address>
     </header>
 
@@ -328,83 +360,104 @@
         <div>
           <div class="sidebar-title">Skills</div>
           <div class="skill-group">
-            <div class="skill-group-label">Design</div>
-            <ul class="skill-list">
-              <li>Figma</li>
-              <li>Framer</li>
-              <li>Canva</li>
-            </ul>
+            <div class="skill-group">
+              <div class="skill-group-label">Programming</div>
+              <ul class="skill-list">
+                <li>TypeScript / JavaScript</li>
+                <li>Python</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Frontend</div>
+              <ul class="skill-list">
+                <li>React</li>
+                <li>React Native</li>
+                <li>Next.js</li>
+                <li>Sass</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-label">Backend &amp; APIs</div>
+              <ul class="skill-list">
+                <li>Django</li>
+                <li>REST APIs</li>
+                <li>GraphQL</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Cloud &amp; Tooling</div>
+              <ul class="skill-list">
+                <li>AWS</li>
+                <li>Docker</li>
+                <li>CI/CD</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Design</div>
+              <ul class="skill-list">
+                <li>Figma</li>
+                <li>Framer</li>
+              </ul>
+            </div>
           </div>
-          <div class="skill-group">
-            <div class="skill-group-label">Frontend</div>
-            <ul class="skill-list">
-              <li>React</li>
-              <li>React Native</li>
-              <li>Next.js</li>
-              <li>Expo</li>
-            </ul>
+        </div>
+        <div>
+          <div class="sidebar-title">References</div>
+          <div class="ref">
+            <div class="ref-name">Sigyn Jónsdóttir</div>
+            <div class="ref-title">CTO, Alda Solutions</div>
           </div>
-          <div class="skill-group">
-            <div class="skill-group-label">Languages</div>
-            <ul class="skill-list">
-              <li>TypeScript</li>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>Java</li>
-              <li>SQL</li>
-            </ul>
+          <div class="ref">
+            <div class="ref-name">Rakel Björt Jónsdóttir</div>
+            <div class="ref-title">Senior Frontend Developer, Helix Health</div>
           </div>
-          <div class="skill-group">
-            <div class="skill-group-label">Backend</div>
-            <ul class="skill-list">
-              <li>Django</li>
-              <li>AWS</li>
-            </ul>
+          <div class="ref">
+            <div class="ref-name">Hlynur Sigurþórsson</div>
+            <div class="ref-title">Chief Architect, Gangverk</div>
+            <div class="ref-title">Co-founder, basta.app</div>
+            <div class="ref-title">Final-project supervisor, Reykjavík University</div>
           </div>
-          <div class="skill-group">
-            <div class="skill-group-label">AI</div>
-            <ul class="skill-list">
-              <li>Claude Code</li>
-              <li>AI Orchestrators</li>
-            </ul>
+          <div class="ref">
+            <div class="ref-name">Sara Nassim</div>
+            <div class="ref-title">Filmmaker &amp; Producer</div>
           </div>
         </div>
       </aside>
 
       <main class="main">
-        <p class="summary">Full-stack software engineer and UX specialist who owns work end to
-          end — from problem framing and design through shipped production code. Three years
-          building Alda's micro-learning platform (React/TypeScript/Next.js, Python/Django, AWS),
+        <p class="summary">Full-stack software developer who contributes at every stage, from problem framing and design
+          through shipped production code. Three years
+          building Alda's micro-learning and survey platform (React/TypeScript/Next.js, Python/Django, AWS),
           increasingly with AI in the loop. Before tech, coordinated film productions and ran
-          cultural events — building project management instincts and a natural feel for
-          cross-functional collaboration.</p>
+          cultural events, where I learned to coordinate people, deadlines, and moving parts across teams.</p>
 
         <section>
           <h2 class="section-title">Experience</h2>
           <div class="job">
             <div class="job-date">May 2023 – Present</div>
             <div class="job-title-line">
-              <span class="company">Alda Software</span>
+              <span class="company">Alda Solutions</span>
               <span class="role"> — Software Developer &amp; UX Specialist</span>
             </div>
             <div class="job-progression">Promoted from Junior Developer (2024)</div>
             <ul class="job-bullets">
-              <li>Built the micro-learning courses platform from inception — architecture through
-                production, including content production. Over 70 micro-learnings for learners
-                in 50+ countries.</li>
-              <li>Contributed to building an AI training chatbot. Use Claude Code in daily
-                development; research and evaluate emerging tools and built AI orchestrators
-                to expand what the team can ship.</li>
-              <li>Implement UX designs from studio partners and create original designs in Figma;
-                build UI components and interface elements — comfortable across the full
-                design-to-code workflow.</li>
-              <li>Design and build customer-facing survey reports — data visualizations that make
-                complex results clear and actionable.</li>
-              <li>Drive accessibility practice (WCAG 2.1 AA) across the web app and course content.</li>
-              <li>Developed team-building and leadership skills through Alda's own leadership-focused
-                program and hands-on practice; run team retrospectives and shape ways of working
-                that benefit each team's dynamic. Ready to take on greater responsibility in
-                shaping team culture and ways of working.</li>
+              <li>Built the micro-learning courses platform from inception, covering architecture
+                through production, including content production. Over 70 micro-learnings for
+                learners in 50+ countries.</li>
+              <li>Implemented UX designs from studio partners and created original designs in Figma,
+                building UI components and interface elements across the full design-to-code
+                workflow.</li>
+              <li>Designed and built customer-facing survey reports with data visualizations that
+                make complex results clear and actionable.</li>
+              <li>Drove accessibility practice (WCAG 2.1 AA) across the web app and course content.</li>
+              <li>Contributed to building an Alda AI training chatbot.</li>
+              <li>Expanded what the team can ship by working AI into daily development, using Claude
+                Code, evaluating emerging tools, and building AI orchestrators.</li>
+              <li>Ran team retrospectives and shaped ways of working to fit each team's dynamic,
+                drawing on Alda's leadership program and hands-on practice.</li>
             </ul>
           </div>
           <div class="job">
@@ -447,7 +500,7 @@
           <h2 class="section-title">Earlier Roles</h2>
           <div class="work-entry">
             <span class="work-dates">2022–2023</span>
-            <span class="work-role">Alda Software — Office Manager &amp; Researcher</span>
+            <span class="work-role">Alda Solutions — Office Manager &amp; Researcher</span>
           </div>
           <div class="work-entry">
             <span class="work-dates">2022–2023</span>
@@ -461,7 +514,8 @@
             <span class="work-dates">2020</span>
             <div>
               <span class="work-role">Beautiful Beings (Join Motion Pictures) — Production Coordinator</span>
-              <div class="work-details">Coordinated production; supervised production assistants, runners and interns</div>
+              <div class="work-details">Coordinated production; supervised production assistants, runners and interns
+              </div>
             </div>
           </div>
           <div class="work-entry">

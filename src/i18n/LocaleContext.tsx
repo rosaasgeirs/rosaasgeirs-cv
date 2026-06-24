@@ -11,8 +11,10 @@ const LocaleContext = createContext<LocaleContextValue | null>(null);
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>(() => {
-    const saved = localStorage.getItem("locale");
-    return saved === "is" ? "is" : "en";
+    // English-only for now: ignore any saved "is" preference so returning
+    // visitors don't get stuck on Icelandic while the toggle is hidden.
+    // To restore bilingual behaviour: return saved === "is" ? "is" : "en";
+    return "en";
   });
 
   useEffect(() => {

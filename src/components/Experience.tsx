@@ -9,8 +9,8 @@ export default function Experience() {
     <Section id="experience">
       <h2 className="section-heading">{t("section.experience")}</h2>
       <div className="work-rows">
-        {workExperience.map((w, i) => (
-          <div key={i} className="work-row stagger-item">
+        {workExperience.map((w) => (
+          <div key={`${w.dates}-${w.role}`} className="work-row stagger-item">
             <span className="entry-date">{w.dates || "\u00A0"}</span>
             <div className="role-and-details">
               <span className="work-role">{w.role}</span>

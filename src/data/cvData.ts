@@ -29,7 +29,7 @@ export interface CVSection {
 
 export const highlights: JobEntry[] = [
   {
-    company: "Alda Software",
+    company: "Alda Solutions",
     role: "Software Developer & UX Specialist"
   },
   {
@@ -66,16 +66,24 @@ export interface SkillCategory {
 
 export const skills: SkillCategory[] = [
   {
-    label: "Frontend",
-    items: ["React", "React Native", "Next.js", "Expo"],
+    label: "Programming",
+    items: ["TypeScript / JavaScript", "Python", "SQL"],
   },
   {
-    label: "Languages",
-    items: ["Typescript", "Python", "Javascript", "Java", "SQL"],
+    label: "Frontend",
+    items: ["React", "React Native", "Next.js", "Sass"],
+  },
+  {
+    label: "Backend & APIs",
+    items: ["Django", "REST APIs", "GraphQL", "PostgreSQL"],
+  },
+  {
+    label: "Cloud & Tooling",
+    items: ["AWS", "Docker", "CI/CD"],
   },
   {
     label: "Design",
-    items: ["Figma", "Framer", "Canva", "GNU Image Manipulation Program (GIMP)"],
+    items: ["Figma", "Framer"],
   },
 ];
 
@@ -99,9 +107,9 @@ export const otherProjects: ProjectEntry[] = [
 ];
 
 export const workExperience: WorkEntry[] = [
-  { dates: "2024–", role: "Alda Software — Software Developer & UX Specialist" },
-  { dates: "2023–2024", role: "Alda Software — Junior Software Developer" },
-  { dates: "2022–2023", role: "Alda Software — Office Manager & Researcher" },
+  { dates: "2024–", role: "Alda Solutions — Software Developer & UX Specialist" },
+  { dates: "2023–2024", role: "Alda Solutions — Junior Software Developer" },
+  { dates: "2022–2023", role: "Alda Solutions — Office Manager & Researcher" },
   { dates: "2022–2023", role: "Tixly — Customer Service Support" },
   { dates: "2021", role: "Physical Cinema Festival — Outdoor projection coordinator" },
   { dates: "2019–2021", role: "Stockfish Film Festival — Program and events manager", detailKey: "work.stockfish.details" },{
@@ -117,8 +125,8 @@ export const workExperience: WorkEntry[] = [
     dates: "2014",
     role: "Anubhuti School, Jalgaon, India — Teaching (Volunteer)",
   },
-  {dates: "2012-2017", role: "Hraðlestin - Waiter" },
-  { dates: "2009–2014", role: "HB Grandi - Fish processing worker" },
+  { dates: "2012–2017", role: "Hraðlestin — Waiter" },
+  { dates: "2009–2014", role: "HB Grandi — Fish processing worker" },
 ];
 
 export const sections: CVSection[] = [

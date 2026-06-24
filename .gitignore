@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .claude
+
+# Private CV with full contact info (not for the public repo)
+private/

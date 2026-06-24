@@ -9,8 +9,8 @@ export default function Projects() {
     <Section id="projects">
       <h2 className="section-heading">{t("section.projects")}</h2>
       <div className="entries">
-        {otherProjects.map((p, i) => (
-          <article key={i} className="entry stagger-item">
+        {otherProjects.map((p) => (
+          <article key={p.detail} className="entry stagger-item">
             <span className="entry-date">{p.dates}</span>
             <p className="entry-desc">{p.detail}</p>
           </article>

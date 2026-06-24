@@ -3,8 +3,10 @@ import { skills, languages } from "../data/cvData";
 import { useLocale } from "../i18n/LocaleContext";
 
 const categoryKeys = {
+  Programming: "skills.programming",
   Frontend: "skills.frontend",
-  Languages: "skills.languages",
+  "Backend & APIs": "skills.backend",
+  "Cloud & Tooling": "skills.tooling",
   Design: "skills.design",
 } as const;
 

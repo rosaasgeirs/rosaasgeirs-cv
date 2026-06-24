@@ -13,7 +13,7 @@ translations = {
     "nav.download": "Download CV",
 
     // Hero
-    "hero.subtitle": "Software Engineer & UX Specialist",
+    "hero.subtitle": "Software Developer",
     "hero.location": "Reykjavík, Iceland",
 
     // Section headings
@@ -27,16 +27,16 @@ translations = {
 
     // Bio
     "bio.text":
-      "Full-stack software engineer and UX specialist who owns work end to end — from problem framing and design through shipped production code. Three years building Alda's micro-learning platform (React/TypeScript/Next.js, Python/Django, AWS), increasingly with AI in the loop. Before tech, coordinated film productions and ran cultural events — building project management instincts and a natural feel for cross-functional collaboration.",
+      "Full-stack software developer who contributes at every stage, from problem framing and design through shipped production code. Three years building Alda's micro-learning and survey platform (React/TypeScript/Next.js, Python/Django, AWS), increasingly with AI in the loop. Before tech, coordinated film productions and ran cultural events, where I learned to coordinate people, deadlines, and moving parts across teams.",
 
     // Story
     "story.text":
-      "A curiosity for the world, art and different cultures lead me to film studies at the University of Iceland. The same motives lead me to travel South America for a few years studying the language, exploring many cultures and ultimately completing part of my degree in Buenos Aires.\n\nBack in Iceland, I started building a career in film and events focusing on production. When cultural events went on hold during the pandemic I enrolled in computer science at Reykjavík University, thinking of it as a practical pivot. But something unexpected happened. I found a creative satisfaction in code which I hadn't experienced before. The problem-solving, the visual design, the experience of building something from nothing and watching people interact with it. What I thought would be purely practical turned out to be a new passion.\n\nI graduated with first class honors and joined Alda Software, where I've grown from a junior developer into a cross-functional role that feels like the meeting point of everything I've done — software development, UX design, and visual storytelling. The winding path turns out to have been the point all along.",
+      "A curiosity for the world, art and different cultures led me to film studies at the University of Iceland. The same motives led me to travel South America for a few years studying the language, exploring many cultures and ultimately completing part of my degree in Buenos Aires.\n\nBack in Iceland, I started building a career in film and events focusing on production. When cultural events went on hold during the pandemic I enrolled in computer science at Reykjavík University, thinking of it as a practical pivot. But something unexpected happened. I found a creative satisfaction in code which I hadn't experienced before. The problem-solving, the visual design, the experience of building something from nothing and watching people interact with it. What I thought would be purely practical turned out to be a new passion.\n\nI graduated with first class honors and joined Alda Solutions, where I've grown from a junior developer into a cross-functional role that feels like the meeting point of everything I've done — software development, UX design, and visual storytelling. The winding path turns out to have been the point all along.",
 
     // Highlights
     "highlights.alda.date": "May 2023 - Present",
     "highlights.alda.desc":
-      "Built the micro-learning courses platform from inception — architecture through production, including content production. Over 70 micro-learnings for learners in 50+ countries. Contributed to building an AI training chatbot; use Claude Code in daily development and built AI orchestrators to expand what the team can ship. Implement UX designs from studio partners and create original designs in Figma; build UI components across the full design-to-code workflow. Design and build customer-facing survey reports — data visualizations that make complex results clear and actionable. Drive accessibility practice (WCAG 2.1 AA) across the web app and course content.",
+      "Built the micro-learning courses platform from inception, covering architecture through production, including content production. Over 70 micro-learnings for learners in 50+ countries. Implemented UX designs from studio partners and created original designs in Figma, building UI components across the full design-to-code workflow. Designed and built customer-facing survey reports with data visualizations that make complex results clear and actionable. Drove accessibility practice (WCAG 2.1 AA) across the web app and course content. Contributed to building an AI training chatbot, and expanded what the team can ship by working AI into daily development, using Claude Code, evaluating emerging tools, and building AI orchestrators.",
     "highlights.frodleiksfusi.date": "December 2023",
     "highlights.frodleiksfusi.desc":
       "Educational game for Þekkingarsetur Suðurnesja: React Native + headless CMS via Apollo GraphQL. Collaborated with Jökulá UX/UI design studio. Went into production on delivery; received top marks.",
@@ -49,12 +49,14 @@ translations = {
     "edu.mr": "Science and Biology department",
 
     // Experience
-    "work.stockfish.details": "Production and coordination of the film progam and events as well as managing interns and volunteers",
+    "work.stockfish.details": "Production and coordination of the film program and events as well as managing interns and volunteers",
     "work.beautifulbeings.details": "Production coordination and management of PAs, runners and interns",
 
     // Skills category labels
+    "skills.programming": "Programming",
     "skills.frontend": "Frontend",
-    "skills.languages": "Languages",
+    "skills.backend": "Backend & APIs",
+    "skills.tooling": "Cloud & Tooling",
     "skills.design": "Design",
 
     // Language levels
@@ -115,8 +117,10 @@ translations = {
     "work.beautifulbeings.details": "Samhæfing á milli deilda og almenn framleiðsla ásamt því að leiða PAs, runners og starfsnema",
 
     // Skills category labels
+    "skills.programming": "Forritunarmál",
     "skills.frontend": "Framendi",
-    "skills.languages": "Forritunarmál",
+    "skills.backend": "Bakendi & API",
+    "skills.tooling": "Ský & verkfæri",
     "skills.design": "Hönnun",
 
     // Language levels

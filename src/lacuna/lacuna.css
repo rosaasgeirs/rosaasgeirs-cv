@@ -1,0 +1,931 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap");
+
+.lacuna {
+  --ocean: #4f6088;
+  /* slate-blue — cool primary (dusty, not navy) */
+  --ocean-700: #34405c;
+  /* deep slate — headings + hover */
+  --ocean-300: #a6b0c4;
+  /* light slate-blue — air */
+  --sand: #e5d5a2;
+  /* sand — warm highlight */
+  --sand-100: #f2e8d2;
+  /* warm tint */
+  --slate: #949aa2;
+  /* cool muted grey */
+  --slate-600: #5a6068;
+  /* cool grey secondary text */
+  --slate-300: #cdd0d4;
+  /* cool border */
+  --ember: #c8702f;
+  /* burnt orange — warm accent */
+  --ember-600: #b05a28;
+  /* orange text accent */
+  --rose: #a8727a;
+  /* dusty rose */
+  --sage: #5e8a6a;
+  /* success only */
+  --ink: #21252c;
+  /* cool charcoal */
+  --mist: #e4e5e5;
+  /* cool surface-alt */
+  --surface: #f0f0ee;
+  /* cool surface */
+  --paper: #f6f5f1;
+  /* soft off-white */
+  --white: #ffffff;
+
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  min-height: 100svh;
+  line-height: 1.5;
+  scroll-snap-align: none;
+}
+
+.lacuna *,
+.lacuna *::before,
+.lacuna *::after {
+  box-sizing: border-box;
+}
+
+.lacuna img {
+  display: block;
+  max-width: 100%;
+}
+
+.lacuna a {
+  color: var(--ember-600);
+  text-decoration: none;
+}
+
+.lacuna a:hover {
+  text-decoration: underline;
+}
+
+/* ---- top nav ---- */
+.lac-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem clamp(1.25rem, 5vw, 3rem);
+  border-bottom: 1px solid var(--mist);
+  position: sticky;
+  top: 0;
+  background: rgba(250, 249, 242, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  font-size: 0.9rem;
+}
+
+.lac-back {
+  font-weight: 600;
+  color: var(--ocean-700);
+}
+
+.lac-navlink {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ---- shared section frame ---- */
+.lac-hero,
+.lac-section {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 5.5rem) clamp(1.25rem, 5vw, 2rem);
+}
+
+.lac-section {
+  border-top: 1px solid var(--mist);
+}
+
+.lac-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+/* ---- hero ---- */
+.lac-hero {
+  text-align: left;
+}
+
+.lac-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0.9rem 0 0.4rem;
+}
+
+.lac-lockup h1 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(3.2rem, 9vw, 5rem);
+  color: var(--ocean-700);
+  line-height: 1;
+  margin: 0;
+}
+
+.lac-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--slate-600);
+  margin-bottom: 1.4rem;
+}
+
+.lac-hero-lead {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--slate-600);
+  max-width: 40rem;
+}
+
+.lac-hero-lead em,
+.lac-prose em,
+.lac-footer em {
+  font-style: italic;
+}
+
+.lac-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0 0;
+  border-top: 1px solid var(--mist);
+  padding: 1.5rem 0 0;
+}
+
+.lac-meta dt {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 0.35rem;
+}
+
+.lac-meta dd {
+  font-size: 0.95rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+
+/* ---- headings + prose ---- */
+.lac-h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--ocean-700);
+  margin-bottom: 1rem;
+}
+
+.lac-h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--ocean-700);
+  margin: 2.5rem 0 0.6rem;
+}
+
+.lac-prose p,
+.lac-prose-lead {
+  font-size: 1.05rem;
+  color: var(--slate-600);
+  max-width: 42rem;
+}
+
+.lac-prose p+p {
+  margin-top: 1rem;
+}
+
+.lac-prose-lead {
+  margin-bottom: 1.75rem;
+}
+
+.lac-flow-tag {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ember-600);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* ---- swatches ---- */
+.lac-swatches {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.9rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.lac-swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lac-chip {
+  height: 86px;
+  border-radius: 10px;
+  border: 1px solid rgba(30, 42, 48, 0.08);
+}
+
+.lac-swatch-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.lac-swatch-meta {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  color: var(--slate);
+}
+
+/* ---- type specimens ---- */
+.lac-type {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--mist);
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+}
+
+.lac-type-sample {
+  color: var(--ink);
+}
+
+.lac-type-sample.serif {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--ocean-700);
+}
+
+.lac-type-sample.sans {
+  font-family: var(--sans);
+  font-size: 1.3rem;
+}
+
+.lac-type-sample.mono {
+  font-family: var(--mono);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.lac-type-label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-top: 0.4rem;
+}
+
+/* ---- shots + galleries ---- */
+.lac-shot {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--mist);
+  background: var(--surface);
+  box-shadow: 0 18px 40px -28px rgba(30, 42, 48, 0.5);
+}
+
+.lac-shot.wide {
+  margin-top: 1.5rem;
+}
+
+.lac-shot.phone {
+  border-radius: 28px;
+}
+
+.lac-shot.email {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  max-width: 38rem;
+}
+
+.lac-gallery {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.lac-gallery.four {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.lac-gallery.phones {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ---- browser frame around the live flow ---- */
+.lac-browser {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--slate-300);
+  box-shadow: 0 30px 60px -30px rgba(30, 42, 48, 0.45);
+  background: var(--paper);
+}
+
+.lac-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  background: var(--mist);
+  border-bottom: 1px solid var(--slate-300);
+}
+
+.lac-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.lac-dots i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--slate-300);
+}
+
+.lac-url {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--slate-600);
+  background: var(--paper);
+  padding: 0.25rem 0.8rem;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   Live flow (lf-)
+   ========================================================= */
+.lf-shell {
+  background: var(--paper);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lf-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.5rem;
+  border-bottom: 1px solid var(--mist);
+}
+
+.lf-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lf-wordmark {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 1.35rem;
+  color: var(--ocean-700);
+}
+
+.lf-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--ocean-700);
+}
+
+.lf-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ocean-300), var(--ocean));
+}
+
+.lf-body {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.5rem;
+  animation: lf-fade 0.45s ease;
+}
+
+@keyframes lf-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lf-body {
+    animation: none;
+  }
+}
+
+.lf-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lf-col.centered {
+  align-items: center;
+  text-align: center;
+}
+
+.lf-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.lf-eyebrow.accent {
+  color: var(--ember-600);
+}
+
+.lf-eyebrow.muted {
+  color: var(--slate);
+}
+
+.lf-h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  color: var(--ocean-700);
+  line-height: 1.1;
+}
+
+.lf-h1.sm {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.lf-display {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--ocean-700);
+  line-height: 1.05;
+}
+
+.lf-lead {
+  font-size: 1.05rem;
+  color: var(--slate-600);
+}
+
+.lf-sub {
+  color: var(--slate-600);
+}
+
+.lf-callout {
+  background: var(--card-bg);
+  border: 1px solid #e0a766;
+  border-left-width: 4px;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+/* buttons */
+.lf-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.lf-actions.spread {
+  justify-content: space-between;
+}
+
+.lf-btn {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  padding: 0.85rem 1.6rem;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.lf-btn.grow {
+  flex: 1;
+}
+
+.lf-btn.block {
+  width: 100%;
+}
+
+.lf-btn.primary {
+  background: var(--ocean);
+  color: var(--paper);
+}
+
+.lf-btn.primary:hover {
+  background: var(--ocean-700);
+}
+
+.lf-btn.ghost {
+  background: transparent;
+  border-color: var(--slate-300);
+  color: var(--ember-600);
+}
+
+.lf-btn.ghost:hover {
+  background: var(--surface);
+}
+
+.lf-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.lf-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--ember-600);
+  white-space: nowrap;
+}
+
+.lf-link:hover {
+  text-decoration: underline;
+}
+
+/* stepper */
+.lf-stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.lf-bar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lf-bar span {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--slate-300);
+}
+
+.lf-bar span.is-on {
+  background: var(--ember);
+}
+
+/* fields */
+.lf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.lf-field-label {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--ocean-700);
+}
+
+.lf-input {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1.5px solid var(--slate-300);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  width: 100%;
+}
+
+.lf-input:focus {
+  outline: none;
+  border-color: var(--ocean);
+  box-shadow: 0 0 0 3px rgba(79, 96, 136, 0.22);
+}
+
+.lf-field-helper {
+  font-size: 0.78rem;
+  color: var(--slate);
+}
+
+.lf-static {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1rem;
+  color: var(--ink);
+  background: #e6e8ec;
+  border: 1.5px solid var(--slate-300);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  width: 100%;
+}
+
+.lf-static-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.lf-row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+/* memory cards */
+.lf-memories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lf-memory {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--slate-300);
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.lf-memory:hover {
+  border-color: var(--slate);
+}
+
+.lf-memory.is-selected {
+  background: #f6ecdd;
+  border-color: var(--ember);
+  border-width: 2px;
+  padding: calc(1.1rem - 1px) calc(1.25rem - 1px);
+}
+
+.lf-check {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  border: 1.5px solid var(--slate);
+  background: var(--white);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.lf-memory.is-selected .lf-check {
+  background: var(--ember);
+  border-color: var(--ember);
+}
+
+.lf-memory-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.lf-memory-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.lf-memory-note {
+  font-size: 0.88rem;
+  color: var(--slate-600);
+}
+
+.lf-memory-meta {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  color: var(--slate);
+}
+
+.lf-memory-thumb {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--rose), var(--sand));
+}
+
+.lf-memory.is-selected .lf-memory-thumb {
+  opacity: 0.55;
+}
+
+.lf-count {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--slate-600);
+}
+
+/* summary + consent */
+.lf-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #efe6d9;
+  border: 1px solid var(--slate-300);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+}
+
+.lf-summary-num {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: var(--ember-600);
+  line-height: 1;
+}
+
+.lf-summary strong {
+  display: block;
+  color: var(--ink);
+}
+
+.lf-summary-sub {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--slate-600);
+}
+
+.lf-consent {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--ink);
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+}
+
+.lf-consent-box {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  border-radius: 6px;
+  border: 1.5px solid var(--slate);
+  background: var(--white);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.lf-consent.is-on .lf-consent-box {
+  background: var(--ember);
+  border-color: var(--ember);
+}
+
+.lf-consent:focus-visible {
+  outline: none;
+}
+
+.lf-consent:focus-visible .lf-consent-box {
+  box-shadow: 0 0 0 3px rgba(79, 96, 136, 0.32);
+}
+
+/* record card */
+.lf-record {
+  width: 100%;
+  background: #efe6d9;
+  border: 1px solid var(--slate-300);
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
+  text-align: left;
+}
+
+.lf-record hr {
+  border: none;
+  border-top: 1px solid var(--slate-300);
+  margin: 0.9rem 0;
+}
+
+.lf-record dl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.lf-record dl>div {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.lf-record dt {
+  color: var(--slate);
+}
+
+.lf-record dd {
+  color: var(--ink);
+  margin: 0;
+}
+
+.lf-record dd.ok {
+  color: var(--sage);
+}
+
+/* ---- footer ---- */
+.lac-footer {
+  border-top: 1px solid var(--mist);
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lac-footer p {
+  font-size: 0.9rem;
+  color: var(--slate-600);
+  max-width: 30rem;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 720px) {
+  .lac-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lac-swatches {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .lac-gallery.four,
+  .lac-gallery.phones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lf-actions {
+    flex-wrap: wrap;
+  }
+
+  .lf-row-between {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lf-memory-thumb {
+    display: none;
+  }
+}
